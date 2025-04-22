@@ -76,3 +76,14 @@ body, html {
   background: linear-gradient(to right, #2563eb, #7c3aed);
   box-shadow: 0 0 20px #60a5fa;
 }
+/* Contrast background box for hero text */
+.contrast-box {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  color: #111;
+}
+
