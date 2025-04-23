@@ -3,80 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCV Tech | Our Services</title>
+  <title>Our Services | SCV Tech</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #111;
+      height: 100%;
+    }
+
+    .video-background {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(255, 255, 255, 0.85);
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .service {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .service img {
+      width: 50%;
+      max-width: 250px;
+      border-radius: 8px;
+      margin-top: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 <body>
-  <header class="hero-header">
-  <nav class="navbar">
-    <img src="logo.jpeg" alt="SCV Tech Logo" class="logo" />
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="photos.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <video autoplay muted loop class="video-background">
+    <source src="background-video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-  <section>
+  <div class="content">
     <h1>Our Services</h1>
 
-    <div class="service-block">
+    <div class="service">
       <h2>Home Theater Design & Installation</h2>
-      <img src="home-theater.png" alt="Home Theater">
-      <p>Custom audio/video setups with in-wall wiring, surround sound, and smart remote systems.</p>
+      <img src="home-theater.png" alt="Home Theater" />
     </div>
 
-    <div class="service-block">
+    <div class="service">
       <h2>Security Camera Systems</h2>
-      <img src="security-camera.jpg" alt="Security Camera">
-      <p>Indoor and outdoor surveillance with Ring, Nest, Wyze — including mobile access and alerts.</p>
+      <img src="security-camera.jpeg" alt="Security Camera" />
     </div>
 
-    <div class="service-block">
+    <div class="service">
       <h2>Smart Control Systems</h2>
-      <img src="smart-control.jpg" alt="Smart Control">
-      <p>Automate lighting, audio, thermostats, locks, and more with integrated smart hubs.</p>
+      <img src="smart-control.jpeg" alt="Smart Control" />
     </div>
 
-    <div class="service-block">
+    <div class="service">
       <h2>TV Mounting & Display Solutions</h2>
-      <img src="tv-mounting.jpg" alt="TV Mounting">
-      <p>Clean installs with hidden cables, over fireplaces, outdoor walls, or custom mounts.</p>
+      <img src="tv-mounting.jpeg" alt="TV Mounting" />
     </div>
 
-    <div class="service-block">
+    <div class="service">
       <h2>Wi-Fi & Network Setup</h2>
-      <img src="wifi-setup.jpg" alt="Wi-Fi Setup">
-      <p>Strong, stable internet coverage with access point installation, mesh networks, and more.</p>
+      <img src="wifi-setup.jpeg" alt="Wi-Fi Setup" />
     </div>
 
-    <div class="service-block">
+    <div class="service">
       <h2>Prewire & Retrofit Projects</h2>
-      <img src="prewire-retrofit.jpg" alt="Prewire and Retrofit">
-      <p>Wire your home or office during remodels or new builds — no drywall damage.</p>
+      <img src="prewire-retrofit.jpeg" alt="Prewire and Retrofit" />
     </div>
 
-    <div class="service-block">
+    <div class="service">
       <h2>Access Control Systems</h2>
-      <img src="access-control.jpg" alt="Access Control">
-      <p>Keypads, smart locks, video doorbells, and gate control for home or business.</p>
+      <img src="access-control.jpeg" alt="Access Control" />
     </div>
 
-    <div class="service-block">
+    <div class="service">
       <h2>Outdoor AV Systems</h2>
-      <img src="outdoor-av.jpg" alt="Outdoor AV">
-      <p>Weatherproof TVs, landscape speakers, and outdoor entertainment zones.</p>
+      <img src="outdoor-av.jpeg" alt="Outdoor AV" />
     </div>
 
-    <div class="service-block">
+    <div class="service">
       <h2>Troubleshooting & Support</h2>
-      <img src="tech-support.jpg" alt="Tech Support">
-      <p>We fix tech that others can't. Diagnostics, cleanups, and reconfiguration.</p>
+      <img src="tech-support.jpeg" alt="Tech Support" />
     </div>
-
-  </section>
+  </div>
 </body>
 </html>
