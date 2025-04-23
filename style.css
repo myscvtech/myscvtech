@@ -2,6 +2,8 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
+  background: url('hero-bg.jpg') center/cover no-repeat fixed;
+  color: #111;
 }
 
 .hero-header {
@@ -82,8 +84,7 @@ body, html {
   padding: 40px;
   border-radius: 12px;
   max-width: 700px;
-  margin: auto;
+  margin: 60px auto;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   color: #111;
 }
-
