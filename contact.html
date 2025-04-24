@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCV Tech | Contact Us</title>
+  <title>Contact Us | SCV Tech</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="hero-header">
-  <nav class="navbar">
+  <nav class="navbar light-text">
     <img src="logo.jpeg" alt="SCV Tech Logo" class="logo" />
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -18,11 +17,22 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-</header>
 
-  <section>
-    <h1>Contact Us</h1>
-    <p>This is the contact us page for SCV Tech.</p>
+  <section class="contrast-box">
+    <h1>Contact SCV Tech</h1>
+    <p>Have a project in mind? Need support? We'd love to hear from you.</p>
+
+    <form action="https://formspree.io/f/xblojwld" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone (optional)" />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p style="margin-top: 30px;">
+      Or email us directly at <a href="mailto:ethan@myscvtech.com">ethan@myscvtech.com</a>
+    </p>
   </section>
 </body>
 </html>
