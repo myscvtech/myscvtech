@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | SCV Tech</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Lightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: #333;
+    }
+    .logo {
+      height: 50px;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background-image: url('gallery-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+    .hero h1 {
+      font-size: 48px;
+    }
+    .gallery-section {
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .gallery-section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+      color: #333;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .gallery-grid a img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .gallery-grid a img:hover {
+      transform: scale(1.05);
+    }
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <img src="logo.jpeg" alt="SCV Tech Logo" class="logo" />
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <h1>Our Work</h1>
+  </div>
+
+  <section class="gallery-section">
+    <h2>Residential Projects</h2>
+    <div class="gallery-grid">
+      <a href="images/residential1.jpg" data-lightbox="residential" data-title="Home Theater Installation">
+        <img src="images/residential1_thumb.jpg" alt="Home Theater Installation" />
+      </a>
+      <a href="images/residential2.jpg" data-lightbox="residential" data-title="Smart Home Integration">
+        <img src="images/residential2_thumb.jpg" alt="Smart Home Integration" />
+      </a>
+      <!-- Add more residential images as needed -->
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <h2>Commercial Projects</h2>
+    <div class="gallery-grid">
+      <a href="images/commercial1.jpg" data-lightbox="commercial" data-title="Conference Room Setup">
+        <img src="images/commercial1_thumb.jpg" alt="Conference Room Setup" />
+      </a>
+      <a href="images/commercial2.jpg" data-lightbox="commercial" data-title="Retail Display Installation">
+        <img src="images/commercial2_thumb.jpg" alt="Retail Display Installation" />
+      </a>
+      <!-- Add more commercial images as needed -->
+    </div>
+  </section>
+
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+</body>
+</html>
