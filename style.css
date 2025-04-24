@@ -2,8 +2,12 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: url('hero-bg.jpg') center/cover no-repeat fixed;
   color: #111;
+}
+
+/* Default background image for all pages */
+body:not(.services-page) {
+  background: url('hero-bg.jpg') center/cover no-repeat fixed;
 }
 
 .hero-header {
