@@ -1,94 +1,155 @@
-body, html {
+/* Reset / Base Styles */
+body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  color: #111;
+  background-color: #f5f5f5;
+  scroll-behavior: smooth;
 }
 
-/* Default background image for all pages */
-body:not(.services-page) {
-  background: url('hero-bg.jpg') center/cover no-repeat fixed;
-}
-
-.hero-header {
-  background: url('hero-bg.jpg') center/cover no-repeat;
-  color: white;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
+/* Navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 20px 40px;
-  background: rgba(15, 23, 42, 0.8);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background-color: #333;
 }
-
 .logo {
   height: 50px;
 }
-
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
 }
-
-.nav-links a {
-  color: #93c5fd;
+.nav-links li a {
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
 }
 
-.nav-links a:hover {
-  color: white;
+/* Hero Section */
+.hero {
+  background-image: url('gallery-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
-.hero-content {
+.hero h1 {
+  font-size: 40px;
   text-align: center;
-  margin: auto;
-  padding-bottom: 80px;
+  padding: 0 20px;
 }
 
-.hero-content h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+/* Gallery */
+.gallery-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
-.hero-content p {
-  font-size: 20px;
+.gallery-section h2 {
+  text-align: center;
   margin-bottom: 30px;
+  font-size: 28px;
+  color: #333;
 }
-
-.cta-button {
-  background: linear-gradient(to right, #3b82f6, #8b5cf6);
-  color: white;
-  padding: 14px 28px;
-  text-decoration: none;
-  font-size: 18px;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.gallery-grid img {
+  width: 100%;
+  height: auto;
   border-radius: 8px;
-  box-shadow: 0 0 12px #3b82f6;
-  transition: 0.3s;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0.9;
+  transform: scale(1);
+  will-change: transform, opacity;
+}
+.gallery-grid img:hover {
+  transform: scale(1.2);
+  opacity: 1;
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.cta-button:hover {
-  background: linear-gradient(to right, #2563eb, #7c3aed);
-  box-shadow: 0 0 20px #60a5fa;
+/* Fade-In Scroll Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-/* Contrast background box for hero text */
-.contrast-box {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 40px;
-  border-radius: 12px;
-  max-width: 700px;
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Divider Line */
+.divider {
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(to right, #4f46e5, #3b82f6);
   margin: 60px auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  color: #111;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: all 0.8s ease-out;
 }
+.divider.show {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* View More Button */
+.view-more {
+  display: block;
+  text-align: center;
+  margin: 30px auto;
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  width: fit-content;
+}
+
+/* Back to Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .hero {
+    height: 180px;
+  }
+  .hero h1 {
+    font-size: 28px;
+  }
+  .gallery-section {
+    padding: 30px 15px;
+  }
+  .gallery-section h2 {
+    font-size: 24px;
+  }
+}
+
