@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery | SCV Tech</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Lightbox CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f5f5f5;
+      scroll-behavior: smooth;
     }
     .navbar {
       display: flex;
@@ -38,7 +37,7 @@
       background-image: url('gallery-hero.jpg');
       background-size: cover;
       background-position: center;
-      height: 300px;
+      height: 250px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -46,17 +45,19 @@
       text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
     .hero h1 {
-      font-size: 48px;
+      font-size: 40px;
+      text-align: center;
+      padding: 0 20px;
     }
     .gallery-section {
-      padding: 60px 40px;
+      padding: 40px 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
     .gallery-section h2 {
       text-align: center;
-      margin-bottom: 40px;
-      font-size: 32px;
+      margin-bottom: 30px;
+      font-size: 28px;
       color: #333;
     }
     .gallery-grid {
@@ -64,18 +65,82 @@
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
-    .gallery-grid a img {
+    .gallery-grid img {
       width: 100%;
       height: auto;
       border-radius: 8px;
-      transition: transform 0.3s ease;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      opacity: 0.9;
+      transform: scale(1);
+      will-change: transform, opacity;
     }
-    .gallery-grid a img:hover {
-      transform: scale(1.05);
+    .gallery-grid img:hover {
+      transform: scale(1.2);
+      opacity: 1;
+      z-index: 10;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .divider {
+      width: 80%;
+      height: 2px;
+      background: linear-gradient(to right, #4f46e5, #3b82f6);
+      margin: 60px auto;
+      opacity: 0;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: all 0.8s ease-out;
+    }
+    .divider.show {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+    .view-more {
+      display: block;
+      text-align: center;
+      margin: 30px auto;
+      background-color: #3b82f6;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      width: fit-content;
+    }
+    #back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #3b82f6;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 24px;
+      text-align: center;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     @media (max-width: 600px) {
+      .hero {
+        height: 180px;
+      }
       .hero h1 {
-        font-size: 32px;
+        font-size: 28px;
+      }
+      .gallery-section {
+        padding: 30px 15px;
+      }
+      .gallery-section h2 {
+        font-size: 24px;
       }
     }
   </style>
@@ -93,36 +158,74 @@
   </nav>
 
   <div class="hero">
-    <h1>Our Work</h1>
+    <h1>SCV Tech Gallery</h1>
   </div>
 
   <section class="gallery-section">
     <h2>Residential Projects</h2>
-    <div class="gallery-grid">
-      <a href="images/residential1.jpg" data-lightbox="residential" data-title="Home Theater Installation">
-        <img src="images/residential1_thumb.jpg" alt="Home Theater Installation" />
-      </a>
-      <a href="images/residential2.jpg" data-lightbox="residential" data-title="Smart Home Integration">
-        <img src="images/residential2_thumb.jpg" alt="Smart Home Integration" />
-      </a>
-      <!-- Add more residential images as needed -->
+    <div class="gallery-grid" id="residential-gallery">
+
+      <img src="residential1_thumb.jpg" alt="residential1" class="fade-in" />
+      <img src="residential2_thumb.jpg" alt="residential2" class="fade-in" />
+      <img src="residential3_thumb.jpg" alt="residential3" class="fade-in" />
+
+      <div id="more-residential" style="display: none;">
+        <img src="residential4_thumb.jpg" alt="residential4" class="fade-in" />
+        <img src="residential5_thumb.jpg" alt="residential5" class="fade-in" />
+        <img src="residential6_thumb.jpg" alt="residential6" class="fade-in" />
+        <img src="residential7_thumb.jpg" alt="residential7" class="fade-in" />
+      </div>
+
     </div>
+
+    <div class="view-more" onclick="showMoreResidential()">View More</div>
   </section>
+
+  <div class="divider fade-in"></div>
 
   <section class="gallery-section">
     <h2>Commercial Projects</h2>
     <div class="gallery-grid">
-      <a href="images/commercial1.jpg" data-lightbox="commercial" data-title="Conference Room Setup">
-        <img src="images/commercial1_thumb.jpg" alt="Conference Room Setup" />
-      </a>
-      <a href="images/commercial2.jpg" data-lightbox="commercial" data-title="Retail Display Installation">
-        <img src="images/commercial2_thumb.jpg" alt="Retail Display Installation" />
-      </a>
-      <!-- Add more commercial images as needed -->
+
+      <img src="commercial1_thumb.jpg" alt="commercial1" class="fade-in" />
+
     </div>
   </section>
 
-  <!-- Lightbox JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+  <div id="back-to-top" onclick="scrollToTop()">↑</div>
+
+  <script>
+    // Scroll reveal animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll('.fade-in, .divider');
+    hiddenElements.forEach(el => observer.observe(el));
+
+    // View More functionality
+    function showMoreResidential() {
+      document.getElementById('more-residential').style.display = 'grid';
+      document.querySelector('.view-more').style.display = 'none';
+    }
+
+    // Back to Top Button functionality
+    const backToTopBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'block';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
