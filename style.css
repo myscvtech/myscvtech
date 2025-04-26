@@ -10,10 +10,10 @@ body {
 /* Navbar */
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
-  background-color: #333;
+  align-items: center;
+  background-color: #2c3e50;
+  padding: 10px 40px;
 }
 .logo {
   height: 50px;
@@ -24,97 +24,88 @@ body {
   gap: 20px;
 }
 .nav-links li a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+.nav-links li a:hover {
+  color: #3b82f6;
 }
 
 /* Hero Section */
 .hero {
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 .hero h1 {
   font-size: 48px;
-  text-align: center;
   padding: 0 20px;
 }
 
-/* Section Content */
-.section {
+/* Sections */
+.section, .services-section, .gallery-section, .contact-section {
   padding: 60px 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
-.section h2 {
+.section h2, .services-section h2, .gallery-section h2 {
   text-align: center;
   margin-bottom: 30px;
   font-size: 32px;
-  color: #333;
+  color: #2c3e50;
 }
-.section p {
-  font-size: 18px;
-  color: #555;
+.section p, .services-section p {
   text-align: center;
+  font-size: 18px;
+  color: #555555;
   line-height: 1.6;
 }
 
-/* Services Section */
-.services-section {
-  padding: 60px 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+/* Services Grid */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 .services-grid img {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition: transform 0.3s ease;
+}
+.services-grid img:hover {
+  transform: scale(1.05);
 }
 
-/* Gallery Section */
-.gallery-section {
-  padding: 60px 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.gallery-section h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 32px;
-  color: #333;
-}
+/* Gallery Grid */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 .gallery-grid img {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0.9;
 }
 .gallery-grid img:hover {
   transform: scale(1.2);
   opacity: 1;
   z-index: 10;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Divider Line */
+/* Divider */
 .divider {
   width: 80%;
   height: 2px;
@@ -128,12 +119,16 @@ body {
   text-align: center;
   margin: 30px auto;
   background-color: #3b82f6;
-  color: #fff;
+  color: #ffffff;
   padding: 12px 24px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
   width: fit-content;
+  transition: background-color 0.3s ease;
+}
+.view-more:hover {
+  background-color: #2563eb;
 }
 
 /* Back to Top Button */
@@ -142,7 +137,7 @@ body {
   bottom: 30px;
   right: 30px;
   background-color: #3b82f6;
-  color: white;
+  color: #ffffff;
   padding: 12px 16px;
   border-radius: 50%;
   font-size: 24px;
@@ -151,19 +146,52 @@ body {
   display: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+#back-to-top:hover {
+  background-color: #2563eb;
+}
 
-/* Responsive Styles */
+/* Contact Form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.contact-form button {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.contact-form button:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive */
 @media (max-width: 600px) {
   .hero {
-    height: 200px;
+    height: 250px;
   }
   .hero h1 {
     font-size: 32px;
   }
-  .section, .services-section, .gallery-section {
+  .section, .services-section, .gallery-section, .contact-section {
     padding: 30px 20px;
   }
-  .section h2, .gallery-section h2 {
-    font-size: 24px;
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 }
