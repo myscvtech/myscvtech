@@ -45,22 +45,14 @@
       <img src="commercial1_thumb.jpg" alt="Commercial 1">
     </div>
 
-    <div id="view-more" class="view-more">View More</div>
+    <div class="view-more">View More</div>
   </section>
 
   <!-- Back to Top Button -->
   <div id="back-to-top">&#8679;</div>
 
-  <!-- JavaScript for Interactions -->
+  <!-- JavaScript for Back to Top -->
   <script>
-    const viewMoreButton = document.getElementById('view-more');
-    viewMoreButton.addEventListener('click', function() {
-      document.querySelectorAll('.gallery-grid img').forEach(img => {
-        img.style.transform = 'scale(1)';
-        img.style.opacity = '1';
-      });
-    });
-
     const backToTopButton = document.getElementById('back-to-top');
     window.addEventListener('scroll', function() {
       if (window.scrollY > 300) {
