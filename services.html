@@ -3,120 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Services | SCV Tech</title>
+  <title>Services | SCV Tech</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      color: #111;
-      height: 100%;
-    }
-
-    .video-background {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-      z-index: -1;
-      object-fit: cover;
-    }
-
-    .content {
-      position: relative;
-      z-index: 1;
-      background-color: rgba(255, 255, 255, 0.85);
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    }
-
-    h1, h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .service {
-      margin-bottom: 40px;
-      text-align: center;
-    }
-
-    .service img {
-      width: 50%;
-      max-width: 250px;
-      border-radius: 8px;
-      margin-top: 15px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-  </style>
 </head>
-<body class="services-page">
-  <nav class="navbar light-text">
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
     <img src="logo.jpeg" alt="SCV Tech Logo" class="logo" />
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="photos.html">Gallery</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <video autoplay muted loop class="video-background">
-    <source src="background-video.mp4" type="video/mp4" />
-  </video>
-
-  <div class="content">
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('gallery-hero.jpg');">
     <h1>Our Services</h1>
+  </section>
 
-    <div class="service">
-      <h2>Home Theater Design & Installation</h2>
-      <img src="home-theater.png" alt="Home Theater" />
+  <!-- Services Section -->
+  <section class="services-section">
+    <h2>What We Offer</h2>
+    <div class="services-grid">
+      <img src="images/home-theater.png" alt="Home Theater" />
+      <img src="images/security-cameras.jpeg" alt="Security Cameras" />
+      <img src="images/tv-mounting.jpeg" alt="Custom TV Mounting" />
+      <img src="images/network-wifi.jpeg" alt="Networks and Wi-Fi" />
+      <img src="images/access-control.jpeg" alt="Access Control" />
+      <img src="images/tech-support.jpeg" alt="Tech Support & Troubleshooting" />
     </div>
+  </section>
 
-    <div class="service">
-      <h2>Security Camera Systems</h2>
-      <img src="security-camera.jpg" alt="Security Camera" />
-    </div>
+  <!-- Back to Top Button -->
+  <div id="back-to-top">&#8679;</div>
 
-    <div class="service">
-      <h2>Smart Control Systems</h2>
-      <img src="smart-control.jpg" alt="Smart Control" />
-    </div>
-
-    <div class="service">
-      <h2>TV Mounting & Display Solutions</h2>
-      <img src="tv-mounting.jpg" alt="TV Mounting" />
-    </div>
-
-    <div class="service">
-      <h2>Wi-Fi & Network Setup</h2>
-      <img src="wifi-setup.jpg" alt="Wi-Fi Setup" />
-    </div>
-
-    <div class="service">
-      <h2>Prewire & Retrofit Projects</h2>
-      <img src="prewire-retrofit.jpg" alt="Prewire and Retrofit" />
-    </div>
-
-    <div class="service">
-      <h2>Access Control Systems</h2>
-      <img src="access-control.jpg" alt="Access Control" />
-    </div>
-
-    <div class="service">
-      <h2>Outdoor AV Systems</h2>
-      <img src="outdoor-av.jpg" alt="Outdoor AV" />
-    </div>
-
-    <div class="service">
-      <h2>Troubleshooting & Support</h2>
-      <img src="tech-support.jpg" alt="Tech Support" />
-    </div>
-  </div>
+  <script>
+    const backToTopButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', function () {
+      backToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    backToTopButton.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
