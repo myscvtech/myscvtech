@@ -3,111 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | SCV Tech</title>
+  <title>Contact | SCV Tech</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: url('gallery-hero.jpg') center/cover no-repeat fixed;
-      color: #111;
-    }
-    .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 40px;
-      background-color: rgba(0, 0, 0, 0.7);
-    }
-    .logo {
-      height: 50px;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    .nav-links li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .contact-section {
-      max-width: 600px;
-      margin: 80px auto;
-      background-color: rgba(255, 255, 255, 0.95);
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    }
-    .contact-section h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 32px;
-    }
-    .contact-section p {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 16px;
-    }
-    .contact-section form {
-      display: flex;
-      flex-direction: column;
-    }
-    .contact-section input,
-    .contact-section textarea {
-      padding: 15px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-    .contact-section button {
-      padding: 15px;
-      background-color: #007BFF;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .contact-section button:hover {
-      background-color: #0056b3;
-    }
-    @media (max-width: 600px) {
-      .contact-section {
-        margin: 40px 20px;
-        padding: 20px;
-      }
-    }
-  </style>
 </head>
 <body>
+
+  <!-- Navbar -->
   <nav class="navbar">
     <img src="logo.jpeg" alt="SCV Tech Logo" class="logo" />
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="photos.html">Gallery</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <section class="contact-section">
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('gallery-hero.jpg');">
     <h1>Contact SCV Tech</h1>
-    <p>We're here to assist you with your audio-visual needs. Please fill out the form below, and we'll get back to you promptly.</p>
+  </section>
 
-    <form action="https://formspree.io/f/xblojwld" method="POST">
-      <input type="hidden" name="_redirect" value="https://myscvtech.vercel.app/thank-you.html" />
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Get in Touch</h2>
+    <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
-      <input type="tel" name="phone" placeholder="Your Phone (optional)" />
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
+
+  <!-- Back to Top Button -->
+  <div id="back-to-top">&#8679;</div>
+
+  <script>
+    const backToTopButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', function () {
+      backToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    backToTopButton.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
