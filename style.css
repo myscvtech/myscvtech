@@ -15,20 +15,24 @@ body {
   background-color: #2c3e50;
   padding: 10px 40px;
 }
+
 .logo {
   height: 50px;
 }
+
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
 }
+
 .nav-links li a {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
+
 .nav-links li a:hover {
   color: #3b82f6;
 }
@@ -44,6 +48,7 @@ body {
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
+
 .hero h1 {
   font-size: 48px;
   padding: 0 20px;
@@ -55,12 +60,14 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .section h2, .services-section h2, .gallery-section h2 {
   text-align: center;
   margin-bottom: 30px;
   font-size: 32px;
   color: #2c3e50;
 }
+
 .section p, .services-section p {
   text-align: center;
   font-size: 18px;
@@ -76,12 +83,14 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .services-grid img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
+
 .services-grid img:hover {
   transform: scale(1.05);
 }
@@ -92,6 +101,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
+
 .gallery-grid img {
   width: 100%;
   height: auto;
@@ -99,6 +109,7 @@ body {
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0.9;
 }
+
 .gallery-grid img:hover {
   transform: scale(1.2);
   opacity: 1;
@@ -127,6 +138,7 @@ body {
   width: fit-content;
   transition: background-color 0.3s ease;
 }
+
 .view-more:hover {
   background-color: #2563eb;
 }
@@ -146,6 +158,7 @@ body {
   display: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+
 #back-to-top:hover {
   background-color: #2563eb;
 }
@@ -155,6 +168,7 @@ body {
   max-width: 600px;
   margin: 0 auto;
 }
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -164,6 +178,7 @@ body {
   border-radius: 6px;
   font-size: 16px;
 }
+
 .contact-form button {
   background-color: #3b82f6;
   color: #fff;
@@ -173,6 +188,7 @@ body {
   cursor: pointer;
   font-size: 18px;
 }
+
 .contact-form button:hover {
   background-color: #2563eb;
 }
@@ -182,19 +198,20 @@ body {
   .hero {
     height: 250px;
   }
+
   .hero h1 {
     font-size: 32px;
   }
+
   .section, .services-section, .gallery-section, .contact-section {
     padding: 30px 20px;
   }
+
   .gallery-grid {
     grid-template-columns: 1fr;
   }
+
   .services-grid {
     grid-template-columns: 1fr;
   }
 }
-
-
-
