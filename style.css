@@ -195,3 +195,15 @@ body {
     grid-template-columns: 1fr;
   }
 }
+.hero-full {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+
