@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | SCV Tech</title>
+  <title>SCV Tech Services</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -20,27 +20,30 @@
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-  <video autoplay loop muted playsinline class="video-background">
-    <source src="videos/services-bg.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <div class="hero-content">
-    <h1>Our Services</h1>
-  </div>
-</section>
+  <!-- Full Video Background Services Section -->
+  <section class="hero" style="position: relative; height: 100vh; overflow: hidden;">
+    <video autoplay loop muted playsinline class="video-background">
+      <source src="videos/services-bg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
-  <!-- Services Section -->
-  <section class="services-section">
-    <h2>What We Offer</h2>
-    <div class="services-grid">
-      <img src="images/home-theater.png" alt="Home Theater" />
-      <img src="images/security-cameras.jpeg" alt="Security Cameras" />
-      <img src="images/tv-mounting.jpeg" alt="Custom TV Mounting" />
-      <img src="images/network-wifi.jpeg" alt="Networks and Wi-Fi" />
-      <img src="images/access-control.jpeg" alt="Access Control" />
-      <img src="images/tech-support.jpeg" alt="Tech Support & Troubleshooting" />
+    <div class="hero-content" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding: 60px 40px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 40px; background-color: rgba(255, 255, 255, 0.6); overflow-y: auto;">
+      <h1 style="color: black; font-size: 42px; background-color: rgba(255,255,255,0.75); padding: 20px 40px; border-radius: 12px;">SCV Tech Services</h1>
+
+      <div class="services-grid" style="max-width: 1200px; width: 100%;">
+        <img src="images/access-control.jpeg" alt="Access Control" />
+        <img src="images/control-systems.jpeg" alt="Control Systems" />
+        <img src="images/customtvmounts.jpeg" alt="Custom TV Mounts" />
+        <img src="images/home-theater.jpeg" alt="Home Theater" />
+        <img src="images/homeaudio.jpeg" alt="Home Audio" />
+        <img src="images/networksandwifi.jpeg" alt="Networks and Wi-Fi" />
+        <img src="images/outdoortvs-speakers.jpeg" alt="Outdoor TVs & Speakers" />
+        <img src="images/prewire-retrofit.jpeg" alt="Prewire and Retrofit" />
+        <img src="images/ringnestwyze.jpeg" alt="Ring, Nest & Wyze" />
+        <img src="images/security-cameras.jpeg" alt="Security Cameras" />
+        <img src="images/smallbusiness-services.jpeg" alt="Small Business Services" />
+        <img src="images/troubleshooting.jpeg" alt="Troubleshooting" />
+      </div>
     </div>
   </section>
 
@@ -56,5 +59,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
+
 </body>
 </html>
