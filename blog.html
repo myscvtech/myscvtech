@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | SCV Tech</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="font-family: 'Helvetica Neue', 'Segoe UI', sans-serif;">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <img src="logo.jpeg" alt="SCV Tech Logo" class="logo" />
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Fullscreen Video Background -->
+  <section class="hero" style="position: relative; height: 100vh; overflow: hidden;">
+    <video autoplay loop muted playsinline class="video-background">
+      <source src="videos/services-bg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-content" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding: 60px 40px; background-color: rgba(255, 255, 255, 0.6); overflow-y: auto; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+      
+      <!-- Blog Header + Posts Container -->
+      <div style="background-color: rgba(255,255,255,0.85); padding: 40px; border-radius: 12px; max-width: 850px; width: 100%; text-align: center;">
+        <h1 style="font-size: 36px; color: black; border-bottom: 3px solid #3b82f6; display: inline-block; padding-bottom: 10px; margin-bottom: 30px;">
+          SCV Tech Blog
+        </h1>
+
+        <article id="smart-upgrades" style="margin-bottom: 40px; text-align: left;">
+          <h2 style="color: #2c3e50;">Top 5 Smart Home Upgrades in 2024</h2>
+          <p>Discover the latest smart home innovations — from advanced lighting systems to integrated voice assistants. These upgrades can enhance your comfort, security, and efficiency.</p>
+        </article>
+
+        <article id="av-prep" style="margin-bottom: 40px; text-align: left;">
+          <h2 style="color: #2c3e50;">How to Prep for a Clean AV Install</h2>
+          <p>Learn how to make your home or office AV installation smooth and efficient with preplanning tips, wire management advice, and room layout considerations.</p>
+        </article>
+
+        <article id="business-security" style="margin-bottom: 20px; text-align: left;">
+          <h2 style="color: #2c3e50;">Protecting Your Business with Smart Security</h2>
+          <p>Explore why smart security systems are a must for businesses in 2024 and how SCV Tech designs solutions that protect your assets without overcomplicating operations.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <div id="back-to-top">&#8679;</div>
+
+  <script>
+    const backToTopButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', function () {
+      backToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    backToTopButton.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
