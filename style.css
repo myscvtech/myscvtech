@@ -33,29 +33,27 @@ body {
   color: #3b82f6;
 }
 
-/* Hero Section (Full Page Background) */
+/* Hero Section with Full Background */
 .hero-full {
-  height: 100vh;
+  background-image: url('images/gallery-hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  padding: 60px 20px;
   position: relative;
-  z-index: -1;
 }
-
-/* Overlay Content */
-.overlay-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
   background-color: rgba(255,255,255,0.85);
   padding: 40px;
   border-radius: 12px;
   text-align: center;
   color: #000;
-  max-width: 600px;
-  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Section Layouts */
@@ -227,9 +225,10 @@ body {
 /* Responsive */
 @media (max-width: 600px) {
   .hero-full {
-    height: 400px;
+    min-height: 500px;
+    padding: 30px 20px;
   }
-  .overlay-box {
+  .hero-content {
     padding: 20px;
     font-size: 14px;
   }
