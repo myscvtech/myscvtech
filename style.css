@@ -158,9 +158,9 @@ body {
 /* Contact Form Section */
 .contact-wrapper {
   max-width: 800px;
-  margin: 60px auto;
-  padding: 40px;
-  background-color: transparent; /* no box background */
+  margin: 20px auto 60px; /* Less top spacing */ 
+  padding: 0 20px;
+  background-color: transparent; /* Remove box */
   text-align: center;
 }
 .contact-wrapper h2 {
