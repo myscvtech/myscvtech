@@ -282,3 +282,11 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+section.contact-wrapper,
+.contact-form,
+.contact-wrapper form {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
