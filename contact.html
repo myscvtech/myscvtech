@@ -16,36 +16,29 @@
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="about.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section with Full Background -->
-  <section class="hero-full contact-page" style="background-image: url('images/gallery-hero.jpg'); margin-bottom: 0;">
-    <div class="hero-content">
-      <h1>Contact SCV Tech</h1>
-      <p>Reach out today for a quote, service call, or consultation</p>
-    </div>
+  <!-- Hero Section -->
+  <section class="hero hero-small" style="background-image: url('images/contact-bg.jpeg');">
+    <h1>Get in Touch</h1>
   </section>
 
   <!-- Contact Form Section -->
   <section class="contact-wrapper">
-    <h2>Get in Touch</h2>
-    <p>Have questions or need a custom quote? We're here to help.</p>
-
-    <form class="contact-form" action="https://formspree.io/f/xblojwld" method="POST">
+    <p class="contact-description">Have questions or need a custom quote? We're here to help.</p>
+    <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <input type="tel" name="phone" placeholder="Phone Number" />
-      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
   <!-- Back to Top Button -->
   <div id="back-to-top">&#8679;</div>
-
   <script>
     const backToTopButton = document.getElementById('back-to-top');
     window.addEventListener('scroll', function () {
