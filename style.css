@@ -62,11 +62,19 @@ body {
 }
 
 /* Sections */
-.section, .services-section, .gallery-section, .contact-section {
-  padding: 60px 40px;
+/* Translucent Box for Sections */
+.section,
+.contact-wrapper,
+.gallery-section,
+.hero-content {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 40px auto;
 }
+
 .section h2, .services-section h2, .gallery-section h2 {
   text-align: center;
   margin-bottom: 30px;
@@ -168,6 +176,7 @@ body {
   max-width: 1200px;
   margin: 40px auto;
 }
+
 
 
 .contact-wrapper h2 {
