@@ -1,71 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery | SCV Tech</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar">
-    <img src="logo.jpeg" alt="SCV Tech Logo" class="logo">
+    <img src="logo.jpeg" alt="SCV Tech Logo" class="logo" />
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html">Blog</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero-full" style="background-image: url('images/gallery-hero.jpg');">
-  <div class="hero-content">
-    <h1>SCV Tech Gallery</h1>
-    <p>Explore our completed work across residential and commercial installs</p>
-  </div>
-</section>
+  <!-- Hero Background -->
+  <section class="hero-full" style="background-image: url('images/livingroom.jpeg');">
+    <div class="hero-overlay">
+      <h1>SCV Tech Gallery</h1>
+      <p>Explore our completed work across residential and commercial installs</p>
+    </div>
+  </section>
 
-  <!-- Gallery Section -->
+  <!-- Residential Section -->
   <section class="gallery-section">
     <h2>Residential Projects</h2>
     <div class="gallery-grid">
-      <img src="images/residential1_thumb.jpg" alt="Residential 1" loading="lazy">
-      <img src="images/residential2_thumb.jpg" alt="Residential 2" loading="lazy">
-      <img src="images/residential3_thumb.jpg" alt="Residential 3" loading="lazy">
-      <img src="images/residential4_thumb.jpg" alt="Residential 4" loading="lazy">
-      <img src="images/residential5_thumb.jpg" alt="Residential 5" loading="lazy">
-      <img src="images/residential6_thumb.jpg" alt="Residential 6" loading="lazy">
-      <img src="images/residential7_thumb.jpg" alt="Residential 7" loading="lazy">
+      <img src="images/residential1.jpg" alt="Residential 1" />
+      <img src="images/residential2.jpg" alt="Residential 2" />
+      <img src="images/residential3.jpg" alt="Residential 3" />
+      <img src="images/residential4.jpg" alt="Residential 4" />
+      <img src="images/residential5.jpg" alt="Residential 5" />
+      <img src="images/residential6.jpg" alt="Residential 6" />
+      <img src="images/residential7.jpg" alt="Residential 7" />
     </div>
-
-    <div class="divider"></div>
-
-    <h2>Commercial Projects</h2>
-    <div class="gallery-grid">
-      <!-- Future Commercial thumbnails go here -->
-    </div>
-
-    <div class="view-more">View More</div>
   </section>
 
-  <!-- Back to Top Button -->
-  <div id="back-to-top">&#8679;</div>
+  <!-- Divider -->
+  <div class="divider"></div>
 
-  <!-- JavaScript for Back to Top -->
+  <!-- Commercial Section -->
+  <section class="gallery-section">
+    <h2>Commercial Projects</h2>
+    <div class="gallery-grid">
+      <img src="images/commercial1.jpg" alt="Commercial 1" />
+      <img src="images/commercial2.jpg" alt="Commercial 2" />
+      <img src="images/commercial3.jpg" alt="Commercial 3" />
+      <img src="images/commercial4.jpg" alt="Commercial 4" />
+      <img src="images/commercial5.jpg" alt="Commercial 5" />
+    </div>
+  </section>
+
+  <!-- View More -->
+  <a href="contact.html" class="view-more">Request a Project Quote</a>
+
+  <!-- Back to Top -->
+  <div id="back-to-top">&#8679;</div>
   <script>
     const backToTopButton = document.getElementById('back-to-top');
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 300) {
-        backToTopButton.style.display = 'block';
-      } else {
-        backToTopButton.style.display = 'none';
-      }
+    window.addEventListener('scroll', () => {
+      backToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
     });
-    backToTopButton.addEventListener('click', function() {
+    backToTopButton.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
