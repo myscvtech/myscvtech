@@ -16,18 +16,20 @@
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html">Blog</a></li>
     </ul>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-full" style="background-image: url('images/home-hero.jpeg');">
-    <h1>Welcome to SCV Tech</h1>
-    <p>Your one-stop solution for audio, video, and smart tech installs</p>
+  <section class="hero-full" style="background-image: url('images/livingroom.jpeg');">
+    <div class="hero-overlay">
+      <h1>Welcome to SCV Tech</h1>
+      <p>Your one-stop solution for audio, video, and smart tech installs</p>
+    </div>
   </section>
 
-  <!-- Main Content Section -->
+  <!-- Home Page Content -->
   <section class="home-content">
     <h2>Get Started Today</h2>
     <p>Contact SCV Tech for a custom quote on your audio/video/security project!</p>
@@ -37,21 +39,20 @@
 
     <h2>From Our Blog</h2>
     <ul class="blog-links">
-      <li><a href="#">Top 5 Smart Home Upgrades in 2025</a></li>
-      <li><a href="#">How to Prep for a Clean AV Install</a></li>
-      <li><a href="#">Protecting Your Business with Smart Security</a></li>
+      <li><a href="blog.html#smart-home-upgrades">Top 5 Smart Home Upgrades in 2025</a></li>
+      <li><a href="blog.html#clean-install">How to Prep for a Clean AV Install</a></li>
+      <li><a href="blog.html#business-security">Protecting Your Business with Smart Security</a></li>
       <li><a href="blog.html">View All Blog Posts</a></li>
     </ul>
   </section>
 
-  <!-- Back to Top Button -->
   <div id="back-to-top">&#8679;</div>
   <script>
     const backToTopButton = document.getElementById('back-to-top');
-    window.addEventListener('scroll', function () {
+    window.addEventListener('scroll', () => {
       backToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
     });
-    backToTopButton.addEventListener('click', function () {
+    backToTopButton.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
