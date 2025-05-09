@@ -1,199 +1,31 @@
-/* Base Reset */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f5f5;
-  scroll-behavior: smooth;
-}
+/* Base Reset */ body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #f5f5f5; scroll-behavior: smooth; }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #2c3e50;
-  padding: 10px 40px;
-}
-.logo {
-  height: 50px;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-.nav-links li a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-.nav-links li a:hover {
-  color: #3b82f6;
-}
+/* Navbar */ .navbar { display: flex; justify-content: space-between; align-items: center; background-color: #2c3e50; padding: 10px 40px; } .logo { height: 50px; } .nav-links { list-style: none; display: flex; gap: 20px; } .nav-links li a { color: #ffffff; text-decoration: none; font-weight: bold; transition: color 0.3s ease; } .nav-links li a:hover { color: #3b82f6; }
 
-/* Hero */
-.hero {
-  background: url('images/living-room.jpg') no-repeat center center/cover;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #000;
-  text-align: center;
-}
-.hero-box {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 40px;
-  border-radius: 12px;
-  max-width: 700px;
-}
-.hero h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-.hero p {
-  font-size: 18px;
-  color: #333;
-}
+/* Hero Sections */ .hero { background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #000000; } .hero-small { height: 300px; background-size: cover; background-position: center; background-repeat: no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; color: #000000; }
 
-/* Sections */
-.section, .services-section, .gallery-section, .contact-section {
-  padding: 60px 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.section h2, .services-section h2, .gallery-section h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 32px;
-  color: #2c3e50;
-}
-.section p, .services-section p {
-  text-align: center;
-  font-size: 18px;
-  color: #555;
-  line-height: 1.6;
-}
+.hero h1, .hero-small h1 { font-size: 48px; background-color: rgba(255, 255, 255, 0.7); padding: 20px 40px; border-radius: 12px; }
 
-/* Buttons */
-.view-more, .quote-button {
-  display: block;
-  text-align: center;
-  margin: 30px auto;
-  background-color: #3b82f6;
-  color: #ffffff;
-  padding: 12px 24px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  width: fit-content;
-  transition: background-color 0.3s ease;
-}
-.view-more:hover, .quote-button:hover {
-  background-color: #2563eb;
-}
+/* Sections */ .section, .services-section, .gallery-section, .contact-section { padding: 60px 40px; max-width: 1200px; margin: 0 auto; } .section h2, .services-section h2, .gallery-section h2 { text-align: center; margin-bottom: 30px; font-size: 32px; color: #2c3e50; text-decoration: underline; } .section p, .services-section p { text-align: center; font-size: 18px; color: #333; line-height: 1.6; background-color: rgba(255, 255, 255, 0.75); padding: 20px; border-radius: 12px; display: inline-block; max-width: 800px; margin-top: 20px; }
 
-/* Gallery */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-.gallery-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0.9;
-}
-.gallery-grid img:hover {
-  transform: scale(1.2);
-  opacity: 1;
-  z-index: 10;
-}
-.gallery-section h2, .gallery-section p {
-  text-align: center;
-}
+/* Services Grid */ .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; justify-content: center; align-items: center; margin-top: 40px; } .services-grid figure { text-align: center; color: #222; } .services-grid img { width: 100%; height: auto; border-radius: 8px; transition: transform 0.3s ease; } .services-grid img:hover { transform: scale(1.05); }
 
-/* Gallery Section Headers */
-.gallery-section h3 {
-  text-align: center;
-  font-size: 24px;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  color: #2c3e50;
-}
+/* Gallery Grid */ .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; } .gallery-grid img { width: 100%; height: auto; border-radius: 8px; transition: transform 0.3s ease, opacity 0.3s ease; opacity: 0.9; } .gallery-grid img:hover { transform: scale(1.2); opacity: 1; z-index: 10; }
 
-/* Contact Form */
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
-}
-.contact-form button {
-  background-color: #3b82f6;
-  color: #fff;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 18px;
-}
-.contact-form button:hover {
-  background-color: #2563eb;
-}
+/* Divider */ .divider { width: 80%; height: 2px; background: linear-gradient(to right, #4f46e5, #3b82f6); margin: 60px auto; }
 
-/* Blog Styling */
-.blog-post {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 30px;
-  margin-bottom: 30px;
-  border-radius: 10px;
-}
-.blog-post h3 {
-  font-size: 24px;
-  color: #000;
-  margin-bottom: 10px;
-}
-.blog-post p {
-  font-size: 16px;
-  color: #222;
-  line-height: 1.6;
-}
-.blog-divider {
-  width: 80%;
-  height: 2px;
-  background: #4f46e5;
-  margin: 40px auto;
-}
+/* View More Button */ .view-more { display: block; text-align: center; margin: 30px auto; background-color: #3b82f6; color: #ffffff; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: bold; width: fit-content; transition: background-color 0.3s ease; } .view-more:hover { background-color: #2563eb; }
 
-/* Centering fixes */
-.gallery-section h3,
-.view-more {
-  text-align: center;
-}
+/* Back to Top Button */ #back-to-top { position: fixed; bottom: 30px; right: 30px; background-color: #3b82f6; color: #ffffff; padding: 12px 16px; border-radius: 50%; font-size: 24px; text-align: center; cursor: pointer; display: none; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); } #back-to-top:hover { background-color: #2563eb; }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .hero {
-    height: auto;
-    padding: 60px 20px;
-  }
-  .hero-box {
-    padding: 20px;
-  }
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-}
+/* Contact Form */ .contact-form { max-width: 600px; margin: 0 auto; background: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 12px; } .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; } .contact-form button { background-color: #3b82f6; color: #fff; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; font-size: 18px; } .contact-form button:hover { background-color: #2563eb; }
+
+/* Responsive */ @media (max-width: 600px) { .hero { height: 250px; } .hero h1 { font-size: 32px; } .section, .services-section, .gallery-section, .contact-section { padding: 30px 20px; } .gallery-grid, .services-grid { grid-template-columns: 1fr; } }
+
+/* Blog */ .blog-section { background-color: rgba(255, 255, 255, 0.8); padding: 40px; border-radius: 12px; margin: 40px auto; max-width: 900px; color: black; } .blog-section h2 { font-size: 28px; text-align: center; margin-bottom: 30px; } .blog-post { margin-bottom: 50px; } .blog-post h3 { font-size: 22px; margin-bottom: 10px; color: #111; } .blog-post p { font-size: 16px; line-height: 1.6; } .blog-preview { margin-bottom: 40px; border-bottom: 1px solid #ccc; padding-bottom: 20px; } .blog-preview img { max-width: 100%; height: auto; border-radius: 12px; margin-bottom: 20px; }
+
+/* Gallery Headings */ .gallery-section h3, .gallery-section h2 { text-align: center; }
+
+.gallery-section .view-more { margin-top: 20px; }
+
+/* Blog Text on Home */ .home-blog { background-color: rgba(255, 255, 255, 0.85); padding: 20px; border-radius: 12px; color: black; margin-top: 40px; }
