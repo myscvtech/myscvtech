@@ -62,6 +62,36 @@ background-color: rgba(255, 255, 255, 0.75); padding: 20px; border-radius: 12px;
 .contact-form button { background-color: #3b82f6; color: #fff; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; font-size: 18px; } 
 .contact-form button:hover { background-color: #2563eb; }
 
+.quote-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.quote-box {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.quote-box h2 {
+  font-size: 28px;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.quote-box p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+
 /* Responsive */ 
 @media (max-width: 600px) { .hero { height: 250px; } .hero h1 { font-size: 32px; } 
 .section, .services-section, .gallery-section, .contact-section { padding: 30px 20px; } 
