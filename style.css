@@ -231,3 +231,30 @@ background-color: rgba(255, 255, 255, 0.75); padding: 20px; border-radius: 12px;
 
 }
 
+.contact-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 0;
+}
+
+.contact-icons a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  gap: 6px;
+}
+
+.contact-icons a:hover {
+  opacity: 0.8;
+}
+
+.contact-icons img.icon {
+  width: 22px;
+  height: 22px;
+}
