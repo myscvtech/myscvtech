@@ -59,7 +59,7 @@ gallery-grid {
 }
 
 .gallery-grid img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   opacity: 1;
   z-index: 2;
 }
