@@ -131,7 +131,7 @@ body.gallery-page {
 }
 
 .blog-box {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: transparent;
   padding: 40px 30px;
   border-radius: 12px;
   text-align: center;
