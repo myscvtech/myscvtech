@@ -38,15 +38,35 @@ background-color: rgba(255, 255, 255, 0.75); padding: 20px; border-radius: 12px;
 .services-grid img { width: 100%; height: auto; border-radius: 8px; transition: transform 0.3s ease; } 
 .services-grid img:hover { transform: scale(1.05); }
 
-/* --- Gallery Grid --- */ .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; justify-content: center; }
+/* --- Gallery Grid --- */ 
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
 
-.gallery-grid img { width: 100%; max-width: 300px; height: auto; border-radius: 8px; transition: transform 0.3s ease, opacity 0.3s ease; opacity: 0.9; position: relative; z-index: 1; }
+.gallery-grid figure {
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 0;
+  position: relative;
+}
 
-.gallery-grid img:hover { transform: scale(1.05); z-index: 2; }
+.gallery-grid img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.95;
+  backface-visibility: hidden;
+}
 
-/* Optional: Improve layout consistency */ .gallery-grid figure { margin: 0; padding: 0; text-align: center; }
-
-.gallery-grid figcaption { margin-top: 8px; font-size: 16px; color: #444; }
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
 
 
 
