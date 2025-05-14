@@ -38,38 +38,17 @@ background-color: rgba(255, 255, 255, 0.75); padding: 20px; border-radius: 12px;
 .services-grid img { width: 100%; height: auto; border-radius: 8px; transition: transform 0.3s ease; } 
 .services-grid img:hover { transform: scale(1.05); }
 
-/* Gallery Grid */ 
-gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  overflow: visible; /* allow zoomed images to overflow */
-  position: relative;
-  z-index: 0;
-} 
-/* Gallery Grid Styling */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  justify-content: center;
-  padding: 20px;
-}
+/* --- Gallery Grid --- */ .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; justify-content: center; }
 
-.gallery-grid img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0.9;
-  z-index: 1;
-  position: relative;
-}
+.gallery-grid img { width: 100%; max-width: 300px; height: auto; border-radius: 8px; transition: transform 0.3s ease, opacity 0.3s ease; opacity: 0.9; position: relative; z-index: 1; }
 
-.gallery-grid img:hover {
-  transform: scale(1.05);
-}
+.gallery-grid img:hover { transform: scale(1.05); z-index: 2; }
+
+/* Optional: Improve layout consistency */ .gallery-grid figure { margin: 0; padding: 0; text-align: center; }
+
+.gallery-grid figcaption { margin-top: 8px; font-size: 16px; color: #444; }
+
+
 
 /* Divider */ 
 .divider { width: 80%; height: 2px; background: linear-gradient(to right, #4f46e5, #3b82f6); margin: 60px auto; }
