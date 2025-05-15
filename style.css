@@ -196,7 +196,7 @@ body.gallery-page {
   align-items: flex-start; /* Align to the top */
   justify-content: center;
   text-align: center;
-  padding: 80 20px 0 20px; /* top right bottom left */
+  padding: 200 20px 0 20px; /* top right bottom left */
 }
 
 .hero-overlay {
