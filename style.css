@@ -32,7 +32,7 @@ text-align: center; color: #000000; }
 .section p, .services-section p { text-align: center; font-size: 18px; color: #333; line-height: 1.6; 
 background-color: rgba(255, 255, 255, 0.75); padding: 20px; border-radius: 12px; display: inline-block; max-width: 800px; margin-top: 20px; }
 .quote-section {
-  margin-top: -80px !important; /* You can lower to 10px if you want it tighter */
+  margin-top: -120px !important; /* You can lower to 10px if you want it tighter */
 }
 
 /* Services Grid */ 
