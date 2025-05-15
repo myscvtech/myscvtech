@@ -204,7 +204,7 @@ body.gallery-page {
   padding: 40px;
   border-radius: 12px;
   max-width: 800px;
-  margin-top: -200; /* Add this line */
+  margin-top: -400; /* Add this line */
 }
 
 .hero-overlay h1 {
