@@ -196,11 +196,11 @@ body.gallery-page {
   align-items: flex-start; /* Align to the top */
   justify-content: center;
   text-align: center;
-  padding: 100px; /* top right bottom left */
+  padding: 5px; /* top right bottom left */
 }
 
 .hero-overlay {
-  background-color: transparent;
+  background-color: transparent ! important;
   padding: 40px;
   border-radius: 12px;
   max-width: 800px;
