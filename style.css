@@ -202,12 +202,15 @@ body.gallery-page {
 }
 
 .hero-overlay {
-  background-color: transparent ! important;
+  background-color: rgba(255, 255, 255, 0.85); /* White translucent box */
   padding: 40px;
   border-radius: 12px;
   max-width: 800px;
-  margin-top: 5px; /* Add this line */
+  margin-top: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 
 .hero-overlay h1 {
   font-size: 48px;
