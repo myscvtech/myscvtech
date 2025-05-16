@@ -103,7 +103,7 @@ body.gallery-page {
 .quote-section {
   display: flex;
   justify-content: center;
-  margin-top: 800px;
+  margin-top: -30px; 
 }
 
 .quote-box {
