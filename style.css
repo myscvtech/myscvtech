@@ -378,3 +378,8 @@ body.gallery-page {
   z-index: 1;
 }
 
+.gallery-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 100vh; /* Pushes content below the background overlay */
+}
