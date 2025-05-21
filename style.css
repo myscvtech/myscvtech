@@ -106,7 +106,7 @@ background-color: rgba(255, 255, 255, 0.75); padding: 20px; border-radius: 12px;
   transform: scale(1.05);
 }
 body.gallery-page {
-  background-image: url('images/home-hero1.jpg');
+  background-image: url('images/gallery-hero1.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
