@@ -349,7 +349,7 @@ body.gallery-page {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url('/images/home-hero1.jpg') center/cover no-repeat;
+  background: url('/images/gallery-hero1.jpg') center/cover no-repeat;
   z-index: -1; /* keep it behind everything */
 }
 
