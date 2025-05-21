@@ -346,7 +346,7 @@ body.gallery-page {
   object-fit: cover;
 }
 
-.hero-full {
+.gallery-full {
   position: fixed;
   top: 0;
   left: 0;
@@ -356,7 +356,7 @@ body.gallery-page {
   z-index: -1; /* keep it behind everything */
 }
 
-.hero-overlay {
+.gallery-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -372,8 +372,8 @@ body.gallery-page {
   z-index: 0; /* just behind content */
 }
 
-.hero-overlay h1,
-.hero-overlay p {
+.gallery-overlay h1,
+.gallery-overlay p {
   color: #000;
   z-index: 1;
 }
