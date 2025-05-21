@@ -43,6 +43,39 @@ background-color: rgba(255, 255, 255, 0.75); padding: 20px; border-radius: 12px;
 .services-grid img { width: 100%; height: auto; border-radius: 8px; transition: transform 0.3s ease; } 
 .services-grid img:hover { transform: scale(1.05); }
 
+
+.hero-full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url('/images/gallery-hero1.jpg') center/cover no-repeat;
+  z-index: -1; /* keep it behind everything */
+}
+
+.hero-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6); /* White dimmer */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  z-index: 0; /* just behind content */
+}
+
+.hero-overlay h1,
+.hero-overlay p {
+  color: #000;
+  z-index: 1;
+}
+
 /* --- Gallery Grid --- */ 
 .gallery-grid {
   display: grid;
@@ -343,34 +376,4 @@ body.gallery-page {
   object-fit: cover;
 }
 
-.hero-full {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: url('/images/gallery-hero1.jpg') center/cover no-repeat;
-  z-index: -1; /* keep it behind everything */
-}
 
-.hero-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.6); /* White dimmer */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-  z-index: 0; /* just behind content */
-}
-
-.hero-overlay h1,
-.hero-overlay p {
-  color: #000;
-  z-index: 1;
-}
