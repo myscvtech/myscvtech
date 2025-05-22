@@ -352,9 +352,6 @@ body.gallery-page {
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), 
-  url('/images/gallery-hero1.jpg') center/cover no-repeat;
-  z-index: -1; /* keep it behind everything */
 }
 
 .gallery-overlay {
@@ -384,4 +381,11 @@ body.gallery-page {
   z-index: 2;
   margin-top: 2rem;
   /* Pushes content below the background overlay */
+}
+
+body.gallery-page {
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+              url('/images/gallery-hero1.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
