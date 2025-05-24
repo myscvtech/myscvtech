@@ -38,7 +38,10 @@ border-radius: 12px;
 
 /* Sections */ 
 .section, .services-section, .gallery-section, 
-.contact-section { padding: 60px 40px; max-width: 1200px; margin: 0 auto; } 
+.contact-section { padding: 60px 40px; max-width: 100%;
+width: 90%;
+margin: 0 auto; 
+} 
 .section h2, .services-section h2, 
 .gallery-section h2 { text-align: center; margin-bottom: 30px; font-size: 32px; color: #2c3e50; text-decoration: underline; } 
 .section p, .services-section p { text-align: center; font-size: 18px; color: #333; line-height: 1.6; 
@@ -422,3 +425,63 @@ body.gallery-page {
     padding: 1rem;
   }
 }
+
+
+@media (max-width: 768px) {
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+    background-position: center;
+  }
+
+  .hero h1, .hero-small h1 {
+    font-size: 6vw;
+    padding: 1rem;
+  }
+
+  /* SECTION CONTAINERS */
+  section, .services-section, .gallery-section, .contact-section,
+  .quote-section {
+    max-width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  section p {
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* GRIDS */
+  .services-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .services-grid img,
+  .gallery-grid img {
+    width: 100%;
+    height: auto;
+  }
+}
+
