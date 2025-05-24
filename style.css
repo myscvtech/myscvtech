@@ -536,3 +536,22 @@ body.gallery-page {
   font-size: 1rem;
   margin: 0 auto;
 }
+
+/* QUOTE BOX HEADINGS & TEXT */
+.quote-box h2,
+.blog-box h2 {
+  font-size: 1.5rem;
+}
+
+.quote-box p,
+.blog-box p {
+  font-size: 1rem;
+}
+
+/* BLOG SECTION */
+.blog-box {
+  width: 90%;
+  max-width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
