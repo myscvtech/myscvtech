@@ -508,3 +508,31 @@ body.gallery-page {
   padding: 10px 20px;
   font-size: 1rem;
 }
+
+/* CONTACT FORM */
+.contact-form {
+  width: 90%;
+  max-width: 100%;
+  padding: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  width: 100%;
+  font-size: 1rem;
+  padding: 12px;
+}
+
+/* QUOTE SECTION */
+.quote-box {
+  width: 90%;
+  max-width: 100%;
+  padding: 20px;
+  font-size: 1rem;
+  margin: 0 auto;
+}
