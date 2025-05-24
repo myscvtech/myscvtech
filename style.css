@@ -456,7 +456,7 @@ body.gallery-page {
   section, .services-section, .gallery-section, .contact-section,
   .quote-section {
     max-width: 100%;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 20px 0;
   }
@@ -485,3 +485,26 @@ body.gallery-page {
   }
 }
 
+/* Fix gallery image width on mobile */
+.gallery-grid img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Optional: background fix for mobile */
+body.gallery-page {
+  background-attachment: scroll;
+}
+
+/* Divider on mobile */
+.divider {
+  width: 90%;
+  margin: 20px auto;
+}
+
+/* View More Button tweaks */
+.view-more {
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
