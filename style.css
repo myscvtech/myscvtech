@@ -431,13 +431,19 @@ body.gallery-page {
   /* NAVBAR */
   .navbar {
     flex-direction: column;
+    align-items: flex-start;
     padding: 10px;
   }
 
+  .logo {
+    margin-bottom: 10px;
+  } 
+  
   .nav-links {
-    flex-direction: column;
-    gap: 10px;
+    width: 100%;
+    align-items: flex-start;
   }
+} 
 
   /* HERO SECTION */
   .hero {
@@ -448,8 +454,8 @@ body.gallery-page {
   }
 
   .hero h1, .hero-small h1 {
-    font-size: 6vw;
-    padding: 1rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  
   }
 
   /* SECTION CONTAINERS */
@@ -532,7 +538,7 @@ body.gallery-page {
 .quote-box {
   width: 90%;
   max-width: 100%;
-  padding: 20px;
+  padding: 15px;
   font-size: 1rem;
   margin: 0 auto;
 }
@@ -552,6 +558,6 @@ body.gallery-page {
 .blog-box {
   width: 90%;
   max-width: 100%;
-  padding: 20px;
+  padding: 15px;
   margin: 0 auto;
 }
