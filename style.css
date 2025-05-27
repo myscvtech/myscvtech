@@ -428,6 +428,7 @@ body.gallery-page {
 
 
 @media (max-width: 768px) {
+  /* MOBILE ONLY STYLES BELOW */
   /* NAVBAR */
   .navbar {
     flex-direction: column;
@@ -440,6 +441,8 @@ body.gallery-page {
   } 
   
   .nav-links {
+    flex-direction: column;
+    gap: 10px;
     width: 100%;
     align-items: flex-start;
   }
@@ -455,14 +458,14 @@ body.gallery-page {
 
   .hero h1, .hero-small h1 {
     font-size: clamp(1.5rem, 5vw, 2.5rem);
-  
+  padding: 1rem;
   }
 
   /* SECTION CONTAINERS */
   section, .services-section, .gallery-section, .contact-section,
   .quote-section {
     max-width: 100%;
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     padding: 20px 0;
   }
