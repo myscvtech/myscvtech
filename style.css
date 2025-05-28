@@ -428,8 +428,6 @@ body.gallery-page {
 
 
 @media (max-width: 768px) {
-  /* MOBILE ONLY STYLES BELOW */
-  /* NAVBAR */
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -438,17 +436,15 @@ body.gallery-page {
 
   .logo {
     margin-bottom: 10px;
-  } 
-  
+  }
+
   .nav-links {
     flex-direction: column;
     gap: 10px;
     width: 100%;
     align-items: flex-start;
   }
-} 
 
-  /* HERO SECTION */
   .hero {
     height: auto;
     padding: 40px 20px;
@@ -458,12 +454,10 @@ body.gallery-page {
 
   .hero h1, .hero-small h1 {
     font-size: clamp(1.5rem, 5vw, 2.5rem);
-  padding: 1rem;
+    padding: 1rem;
   }
 
-  /* SECTION CONTAINERS */
-  section, .services-section, .gallery-section, .contact-section,
-  .quote-section {
+  .section, .services-section, .gallery-section, .contact-section, .quote-section {
     max-width: 100%;
     width: 90%;
     margin: 0 auto;
@@ -479,88 +473,66 @@ body.gallery-page {
     text-align: center;
   }
 
-  /* GRIDS */
-  .services-grid,
-  .gallery-grid {
+  .services-grid, .gallery-grid {
     grid-template-columns: 1fr;
     gap: 15px;
     padding: 10px;
   }
 
-  .services-grid img,
-  .gallery-grid img {
+  .services-grid img, .gallery-grid img {
     width: 100%;
     height: auto;
   }
-}
 
-/* Fix gallery image width on mobile */
-.gallery-grid img {
-  width: 100%;
-  max-width: 100%;
-}
+  .divider {
+    width: 90%;
+    margin: 20px auto;
+  }
 
-/* Optional: background fix for mobile */
-body.gallery-page {
-  background-attachment: scroll;
-}
+  .view-more {
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
 
-/* Divider on mobile */
-.divider {
-  width: 90%;
-  margin: 20px auto;
-}
+  .contact-form {
+    width: 90%;
+    max-width: 100%;
+    padding: 15px;
+  }
 
-/* View More Button tweaks */
-.view-more {
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-size: 1rem;
-}
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
 
-/* CONTACT FORM */
-.contact-form {
-  width: 90%;
-  max-width: 100%;
-  padding: 15px;
-}
+  .contact-form button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+  }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  font-size: 1rem;
-}
+  .quote-box,
+  .blog-box {
+    width: 90%;
+    max-width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    margin: 0 auto;
+  }
 
-.contact-form button {
-  width: 100%;
-  font-size: 1rem;
-  padding: 12px;
-}
+  .quote-box h2,
+  .blog-box h2 {
+    font-size: 1.5rem;
+  }
 
-/* QUOTE SECTION */
-.quote-box {
-  width: 90%;
-  max-width: 100%;
-  padding: 15px;
-  font-size: 1rem;
-  margin: 0 auto;
-}
+  .quote-box p,
+  .blog-box p {
+    font-size: 1rem;
+  }
 
-/* QUOTE BOX HEADINGS & TEXT */
-.quote-box h2,
-.blog-box h2 {
-  font-size: 1.5rem;
-}
-
-.quote-box p,
-.blog-box p {
-  font-size: 1rem;
-}
-
-/* BLOG SECTION */
-.blog-box {
-  width: 90%;
-  max-width: 100%;
-  padding: 15px;
-  margin: 0 auto;
+  body.gallery-page {
+    background-attachment: scroll;
+  }
 }
