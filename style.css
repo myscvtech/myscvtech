@@ -620,7 +620,7 @@ Css
   transform: scale(1.05);
 }
 
-/* Disable pointer and clicking on links */
+/* Only disable clicking on gallery links */
 .gallery-link {
   pointer-events: none;
   cursor: default;
