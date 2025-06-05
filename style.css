@@ -621,7 +621,7 @@ Css
 }
 
 /* Disable pointer and clicking on links */
-.disabled-link {
+.gallery-link {
   pointer-events: none;
   cursor: default;
 }
