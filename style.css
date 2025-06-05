@@ -622,7 +622,6 @@ Css
 
 /* Only disable clicking on gallery links */
 .gallery-link {
-  pointer-events: none;
   cursor: default;
 }
 
