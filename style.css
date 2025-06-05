@@ -569,3 +569,38 @@ margin: 10px 0;
   padding-top: 30px;
   padding-bottom: 10px;
 }
+
+
+
+Css
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-thumb,
+.gallery-full {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.gallery-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  transform: scale(1);
+}
+
+.gallery-item:hover .gallery-full {
+  opacity: 1;
+  transform: scale(1.05); /* subtle zoom on hover */
+}
+
+.gallery-item:hover .gallery-thumb {
+  opacity: 0;
+}
