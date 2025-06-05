@@ -596,14 +596,6 @@ Css
   transform: scale(1);
 }
 
-.gallery-item:hover .gallery-full {
-  opacity: 1;
-  transform: scale(1.05); /* subtle zoom on hover */
-}
-
-.gallery-item:hover .gallery-thumb {
-  opacity: 0;
-}
 
 
 
@@ -614,10 +606,12 @@ Css
   display: block;
   border-radius: 8px;
   transition: transform 0.3s ease;
+  opacity: 1 !important;
 }
 
 .gallery-item:hover .gallery-thumb {
   transform: scale(1.05);
+  opacity: 1 !important;
 }
 
 /* Only disable clicking on gallery links */
