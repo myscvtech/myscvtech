@@ -628,3 +628,9 @@ Css
   cursor: default;
 }
 
+body.gallery-page,
+.gallery-full,
+.gallery-overlay {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
