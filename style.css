@@ -100,7 +100,12 @@ body.gallery-page {
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
-
+body.gallery-page {
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+              url('/images/gallery-hero1.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
 /* Divider */ 
 .divider { width: 80%; height: 2px; background: linear-gradient(to right, #4f46e5, #3b82f6); margin: 60px auto; }
