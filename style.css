@@ -399,13 +399,6 @@ body.gallery-page {
   /* Pushes content below the background overlay */
 }
 
-body.gallery-page {
-  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
-              url('/images/gallery-hero1.jpg') center/cover no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
