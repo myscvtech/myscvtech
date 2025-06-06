@@ -383,7 +383,6 @@ body.gallery-page {
   align-items: center;
   text-align: center;
   padding: 2rem;
-  z-index: 1;
 }
 
 .gallery-overlay h1,
