@@ -93,6 +93,7 @@ background-color: rgba(255, 255, 255, 0.75); padding: 20px; border-radius: 12px;
 }
 body.gallery-page {
   padding-top: 100px;
+  transition: padding-top 0.3s ease;
   background-image: url('images/gallery-hero1.jpg');
   background-size: cover;
   background-position: center;
