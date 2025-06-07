@@ -633,3 +633,30 @@ body.gallery-page,
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
+
+
+
+.gallery-full {
+  position: relative;
+  padding-top: 10px; /* reduced from 30 or 40 */
+  padding-bottom: 10px;
+  z-index: 0;
+}
+
+.gallery-overlay {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  padding: 20px 30px; /* controls box spacing inside */
+  max-width: 800px;
+  margin: 0 auto 10px auto; /* no top margin, small bottom */
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-overlay h1,
+.gallery-overlay p {
+  color: #111;
+  margin: 6px 0;
+}
