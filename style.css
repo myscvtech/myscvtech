@@ -652,9 +652,12 @@ body.gallery-page,
   border-radius: 16px;
   padding: 20px 30px; /* controls box spacing inside */
   max-width: 800px;
-  margin: 0 auto 10px auto; /* no top margin, small bottom */
+  margin: 20px auto; /* no top margin, small bottom */
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-height: fit-content; /* new*/
+  height: auto; 
+  /* new */ 
 }
 
 .gallery-overlay h1,
