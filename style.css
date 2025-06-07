@@ -112,6 +112,8 @@ body.gallery-page {
               url('/images/gallery-hero1.jpg') center/cover no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Divider */ 
@@ -630,8 +632,8 @@ Css
 body.gallery-page,
 .gallery-full,
 .gallery-overlay {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 
