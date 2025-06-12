@@ -1,5 +1,6 @@
 /* Base Reset */ 
 body {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', tungsten bold;
@@ -420,8 +421,13 @@ body.gallery-page {
   }
 
   .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
     flex-direction: row;
     gap: 10px;
+    overflow-x: hidden;
   }
 
   .hero {
