@@ -420,7 +420,7 @@ body.gallery-page {
   }
 
   .nav-links {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
   }
 
@@ -440,13 +440,13 @@ body.gallery-page {
 
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     padding: 10px;
   }
 
   .logo-and-icons {
-  flex-direction: column;
+  flex-direction: row;
   align-items: center; 
   text-align: center; 
   gap: 10px;
