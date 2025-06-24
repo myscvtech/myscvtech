@@ -769,3 +769,37 @@ body.gallery-page,
     gap: 40px;
   }
 }
+
+
+
+@media screen and (min-width: 1024px) {
+  .content-box h1 {
+    font-size: 3.2rem;
+  }
+
+  .content-box p {
+    font-size: 1.35rem;
+    max-width: 900px;
+    margin: 0 auto 50px;
+  }
+
+  .service-icon img {
+    max-width: 160px;
+    height: auto;
+  }
+
+  .service-icon p {
+    font-size: 1.2rem;
+    margin-top: 12px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 50px;
+    justify-items: center;
+  }
+
+  .content-box {
+    padding: 80px 100px;
+  }
+}
