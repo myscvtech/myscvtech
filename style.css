@@ -946,3 +946,39 @@ body.gallery-page,
     padding: 12px 20px;
   }
 }
+
+
+
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* prevent horizontal scrolling */
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .white-box {
+    width: 90% !important;
+    padding: 16px !important;
+    margin: 16px auto !important;
+    font-size: 1rem !important;
+    box-sizing: border-box;
+  }
+
+  h1, h2 {
+    font-size: 1.8rem !important;
+    line-height: 2.2rem !important;
+    text-align: center;
+  }
+
+  .cta-button {
+    font-size: 1rem !important;
+    padding: 12px 20px !important;
+    width: auto;
+  }
+}
