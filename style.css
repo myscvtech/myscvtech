@@ -1024,3 +1024,36 @@ body.gallery-page,
 
 
 
+.gallery-header-box {
+  width: 90%;
+  margin: 0 auto 24px auto;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.gallery-header-box h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.gallery-header-box p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.section-title {
+  width: 90%;
+  margin: 24px auto 16px auto;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.gallery-image {
+  width: 90%;
+  margin: 12px auto;
+  display: block;
+  border-radius: 12px;
+}
