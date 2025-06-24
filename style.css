@@ -987,10 +987,10 @@ body.gallery-page,
 
 @media screen and (max-width: 768px) {
   .gallery-header-box {
-  width: 90%;
-  margin: 0 auto 24px auto;
-  padding: 20px;
-  text-align: center;
+  width: 90% !important;
+  margin: 0 auto 24px auto !important;
+  padding: 20px !important;
+  text-align: center !important;
   box-sizing: border-box;
 }
 
