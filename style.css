@@ -745,3 +745,27 @@ body.gallery-page,
   margin-top: 10px;
   text-align: center;
 }
+
+
+
+@media screen and (min-width: 768px) {
+  .content-box h1 {
+    font-size: 3rem;
+  }
+
+  .content-box p {
+    font-size: 1.25rem;
+  }
+
+  .service-icon p {
+    font-size: 1.1rem;
+  }
+
+  .content-box {
+    padding: 60px 80px;
+  }
+
+  .services-grid {
+    gap: 40px;
+  }
+}
