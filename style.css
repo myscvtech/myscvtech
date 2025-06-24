@@ -3,7 +3,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', tungsten bold;
+  font-family: 'Segoe UI', berling-roman;
   background: url('images/home-hero1.jpg') no-repeat center center fixed;
   background-size: cover;
   scroll-behavior: smooth;
