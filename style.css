@@ -671,3 +671,77 @@ body.gallery-page,
   color: #111;
   margin: 6px 0;
 }
+
+/* === SCV Tech Services Section Enhancements === */
+@font-face {
+  font-family: 'berling-roman';
+  src: url('fonts/berling-roman.otf') format('otf'); /* adjust path as needed */
+}
+
+@font-face {
+  font-family: 'berlingltstd-bold';
+  src: url('fonts/berlingltstd-bold.otf') format('otf');
+}
+
+.services-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.content-box {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px 60px;
+  border-radius: 20px;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.content-box h1 {
+  font-family: 'berlingltstd-bold', serif;
+  font-size: 2.5rem;
+  border-bottom: 3px solid #2c3e50;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.content-box p {
+  font-family: 'berling-roman', serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+}
+
+.service-icon {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.service-icon:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.service-icon img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.service-icon p {
+  font-family: 'berling-roman', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+}
