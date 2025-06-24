@@ -675,12 +675,12 @@ body.gallery-page,
 /* === SCV Tech Services Section Enhancements === */
 @font-face {
   font-family: 'berling-roman';
-  src: url('fonts/berling-roman.otf') format('otf'); /* adjust path as needed */
+  src: url('fonts/berling-roman.woff2') format('woff2'); /* adjust path as needed */
 }
 
 @font-face {
   font-family: 'berlingltstd-bold';
-  src: url('fonts/berlingltstd-bold.otf') format('otf');
+  src: url('fonts/berlingltstd-bold.woff2') format('woff2');
 }
 
 .services-section {
