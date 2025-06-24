@@ -921,3 +921,28 @@ body.gallery-page,
     max-width: 100%;
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  .hero-text-container {
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 2rem; /* makes the Welcome text smaller on mobile */
+  }
+
+  .white-box {
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+}
