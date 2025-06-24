@@ -1019,3 +1019,29 @@ body.gallery-page,
     overflow-x: hidden;
   }
 }
+
+
+
+@media screen and (max-width: 768px) {
+  .white-box {
+    margin: 24px auto !important; /* more vertical spacing */
+    padding: 20px !important;
+    width: 90% !important;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  h1, h2 {
+    margin-bottom: 16px !important; /* space below titles */
+    text-align: center;
+  }
+
+  .cta-button {
+    margin-top: 20px !important; /* space above the button */
+    margin-bottom: 30px !important;
+  }
+
+  .hero-section {
+    gap: 24px; /* ensures spacing between flex items if used */
+  }
+}
