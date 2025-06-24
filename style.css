@@ -1057,3 +1057,36 @@ body.gallery-page,
   display: block;
   border-radius: 12px;
 }
+
+
+.gallery-header-box {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 24px auto;
+  width: 90%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.gallery-header-box h1 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.gallery-header-box p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+
+
+.gallery-title {
+  width: 90%;
+  margin: 30px auto 16px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
