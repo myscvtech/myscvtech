@@ -997,7 +997,7 @@ body.gallery-page,
   .white-box {
     width: 90%;
     padding: 20px;
-    margin: 10px auto;
+    margin: 24px auto;
     font-size: 1rem;
     box-sizing: border-box;
   }
@@ -1005,14 +1005,15 @@ body.gallery-page,
   h1, h2 {
     font-size: 1.8rem;
     line-height: 2.2rem;
-    margin: 0 0 10px 0;
+    margin: 0 0 16px 0;
     text-align: center;
   }
 
   .cta-button {
     font-size: 1rem;
-    padding: 50px;
-    margin-top: 10px;
+    padding: 14px 28px;
+    margin-top: 16px;
+    margin-bottom: 24px;
   }
 
   body {
