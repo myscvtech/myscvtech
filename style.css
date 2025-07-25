@@ -1100,12 +1100,15 @@ body.gallery-page,
 
 
 .service-areas-box {
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.85); /* Matches About section */
+  backdrop-filter: blur(4px); /* Soft background blur */
+  padding: 2.5rem 2rem;
   border-radius: 1rem;
-  max-width: 1200px;
-  margin: 3rem auto;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  margin: 4rem auto 2rem auto;
+  max-width: 1000px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
 }
 
 .service-areas-box h2 {
@@ -1130,6 +1133,7 @@ body.gallery-page,
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  padding: 0 1rem;
 }
 
 .city-columns ul {
@@ -1146,13 +1150,34 @@ body.gallery-page,
   border-bottom: 1px solid #ddd;
 }
 
+/* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
   .city-columns {
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
 
   .city-columns ul {
     width: 100%;
+    max-width: 100%;
+  }
+
+  .service-areas-box {
+    padding: 1.5rem 1.2rem;
+    margin: 2rem auto;
+  }
+
+  .service-areas-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .service-areas-box .intro {
+    font-size: 0.95rem;
+  }
+
+  .city-columns li {
+    font-size: 0.95rem;
+    border-bottom: 1px solid #eee;
   }
 }
