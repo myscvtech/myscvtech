@@ -1097,60 +1097,62 @@ body.gallery-page,
 }
 
 
-.service-areas {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 2rem;
+
+
+.service-areas-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
   border-radius: 1rem;
-  margin-top: 2rem;
   max-width: 1200px;
-  margin-inline: auto;
+  margin: 3rem auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-.service-areas h2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
+.service-areas-box h2 {
   text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #111;
 }
 
-.service-areas p {
+.service-areas-box .intro {
+  text-align: center;
   font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  text-align: center;
+  margin-bottom: 2rem;
+  color: #444;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.city-list {
+.city-columns {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
 }
 
-.city-list ul {
-  flex: 1 1 200px;
-  list-style-type: disc;
-  padding-left: 1.2rem;
+.city-columns ul {
+  flex: 1 1 220px;
+  list-style: none;
+  padding-left: 0;
   margin: 0;
 }
 
-@media (max-width: 768px) {
-  .city-list {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .city-list ul {
-    width: 100%;
-  }
-
-  .service-areas {
-    padding: 1.5rem;
-  }
-
-  .service-areas h2 {
-    font-size: 1.5rem;
-  }
+.city-columns li {
+  padding: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #222;
+  border-bottom: 1px solid #ddd;
 }
 
+@media (max-width: 768px) {
+  .city-columns {
+    flex-direction: column;
+    align-items: center;
+  }
 
-
+  .city-columns ul {
+    width: 100%;
+  }
+}
