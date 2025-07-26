@@ -1102,6 +1102,33 @@ body.gallery-page,
 
 
 
+
+
+
+
+/* ABOUT SECTION */
+.about-box {
+  /* If this already exists, just add to it: */
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* optional for visual separation */
+}
+
+
+.about-box {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+
+.about-box {
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+}
+
+
+
 .service-areas-box {
   background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(4px);
@@ -1200,28 +1227,6 @@ body.gallery-page,
   }
 }
 
-
-
-/* ABOUT SECTION */
-.about-box {
-  /* If this already exists, just add to it: */
-  margin-bottom: 4rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* optional for visual separation */
-}
-
-
-.about-box {
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  padding-bottom: 2rem;
-  margin-bottom: 3rem;
-}
-
-
-.about-box {
-  margin-bottom: 4rem;
-  padding-bottom: 2rem;
-}
 
 .service-areas-box {
   margin-top: 2rem;
