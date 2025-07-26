@@ -1106,39 +1106,27 @@ body.gallery-page,
 
 
 
-/* ABOUT SECTION */
+/* ===================== ABOUT SECTION ===================== */
 .about-box {
-  /* If this already exists, just add to it: */
-  margin-bottom: 4rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* optional for visual separation */
-}
-
-
-.about-box {
-  border-bottom: 1px solid rgba(0,0,0,0.1);
   padding-bottom: 2rem;
   margin-bottom: 3rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
 }
 
-
-.about-box {
-  margin-bottom: 4rem;
-  padding-bottom: 2rem;
-}
-
-
-
+/* ===================== SERVICE AREAS ===================== */
 .service-areas-box {
   background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(4px);
   padding: 2rem 1.5rem;
   border-radius: 1rem;
-  margin: 4rem auto 2rem auto;
+  margin: 3rem auto;
   max-width: 1100px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   position: relative;
-  z-index: 2;
+  z-index: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .service-areas-box h2 {
@@ -1173,7 +1161,9 @@ body.gallery-page,
   border-bottom: 1px solid #eee;
 }
 
-/* Responsive layout for smaller screens */
+
+/* ========== Responsive Layout ========== */
+
 @media (max-width: 1200px) {
   .city-columns ul {
     column-count: 5;
@@ -1205,39 +1195,6 @@ body.gallery-page,
 
   .city-columns li {
     font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .city-columns ul {
-    column-count: 1;
-  }
-}
-
-
-.service-areas-box {
-  border-top: 1px solid rgba(0,0,0,0.05);
-}
-
-
-/* Extra Small Screens */
-@media (max-width: 480px) {
-  .city-columns {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-.service-areas-box {
-  margin-top: 2rem;
-  position: relative;
-  z-index: 1;
-}
-
-
-@media (max-width: 768px) {
-  .city-columns ul {
-    column-count: 2;
   }
 }
 
