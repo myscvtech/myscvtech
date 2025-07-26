@@ -1216,3 +1216,28 @@ body.gallery-page,
   padding-bottom: 2rem;
   margin-bottom: 3rem;
 }
+
+
+.about-box {
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+}
+
+.service-areas-box {
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+  .city-columns ul {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .city-columns ul {
+    column-count: 1;
+  }
+}
