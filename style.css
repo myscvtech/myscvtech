@@ -1100,40 +1100,39 @@ body.gallery-page,
 
 
 .service-areas-box {
-  background-color: rgba(255, 255, 255, 0.85); /* Match About section */
+  background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(4px);
-  padding: 2.5rem 2rem;
+  padding: 2rem 1.5rem;
   border-radius: 1rem;
-  margin: 5rem auto 2rem auto;
-  max-width: 1200px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 3rem auto 2rem auto;
+  max-width: 1100px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 2;
-  overflow: hidden;
 }
 
 .service-areas-box h2 {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
   color: #111;
 }
 
 .service-areas-box .intro {
   text-align: center;
-  font-size: 1rem;
-  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
   color: #444;
-  max-width: 800px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .city-columns {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 columns */
-  gap: 1.5rem;
-  padding: 0 1rem;
+  grid-template-columns: repeat(7, 1fr); /* More columns = shorter height */
+  gap: 1rem;
+  padding: 0 0.5rem;
 }
 
 .city-columns ul {
@@ -1143,42 +1142,45 @@ body.gallery-page,
 }
 
 .city-columns li {
-  padding: 0.3rem 0;
-  font-size: 0.95rem;
+  padding: 0.2rem 0;
+  font-size: 0.85rem;
   color: #222;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #eee;
 }
 
-/* Mobile Optimization */
+/* Tablet */
 @media (max-width: 1024px) {
   .city-columns {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .city-columns {
     grid-template-columns: repeat(2, 1fr);
-    padding: 0;
   }
 
   .service-areas-box {
-    padding: 1.5rem 1rem;
-    margin-top: 3rem;
+    padding: 1.2rem 1rem;
   }
 
   .service-areas-box h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .service-areas-box .intro {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+  }
+
+  .city-columns li {
+    font-size: 0.9rem;
   }
 }
 
+/* Extra Small Screens */
 @media (max-width: 480px) {
   .city-columns {
     grid-template-columns: 1fr;
   }
 }
-
