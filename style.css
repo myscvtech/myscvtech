@@ -1188,6 +1188,10 @@ body.gallery-page,
 }
 
 
+.service-areas-box {
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
 
 /* Extra Small Screens */
 @media (max-width: 480px) {
@@ -1204,4 +1208,11 @@ body.gallery-page,
   margin-bottom: 4rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* optional for visual separation */
+}
+
+
+.about-box {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
 }
