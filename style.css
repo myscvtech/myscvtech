@@ -1195,3 +1195,13 @@ body.gallery-page,
     grid-template-columns: 1fr;
   }
 }
+
+
+
+/* ABOUT SECTION */
+.about-box {
+  /* If this already exists, just add to it: */
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* optional for visual separation */
+}
