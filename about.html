@@ -1,10 +1,92 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | SCV Tech</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Ensure consistent box layout */
+    .content-box {
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(4px);
+      max-width: 850px;
+      width: 100%;
+      margin: 2rem auto;
+      border-radius: 12px;
+      padding: 30px 40px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+    }
+
+    .service-areas-box h2 {
+      text-align: center;
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
+      color: #111;
+    }
+
+    .service-areas-box .intro {
+      text-align: center;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      color: #444;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .city-columns ul {
+      column-count: 7;
+      column-gap: 2rem;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    .city-columns li {
+      padding: 0.25rem 0;
+      font-size: 0.85rem;
+      color: #222;
+      border-bottom: 1px solid #eee;
+    }
+
+    @media (max-width: 1200px) {
+      .city-columns ul { column-count: 5; }
+    }
+
+    @media (max-width: 1024px) {
+      .city-columns ul { column-count: 4; }
+    }
+
+    @media (max-width: 768px) {
+      .city-columns ul { column-count: 2; }
+    }
+
+    @media (max-width: 480px) {
+      .city-columns ul {
+        column-count: 1;
+        display: none;
+      }
+      .toggle-button {
+        display: block;
+        text-align: center;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        font-size: 1rem;
+        background-color: #3b82f6;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+      }
+    }
+
+    @media (min-width: 481px) {
+      .toggle-button {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body style="font-family: 'Helvetica Neue', 'Segoe UI', sans-serif;">
 
@@ -13,21 +95,11 @@
     <div class="logo-and-icons">
       <img src="images/logo.png" alt="SCV Tech Logo" class="logo" />
       <div class="contact-icons">
-        <a href="tel:6612149212">
-          <img src="images/phone-icon.png" alt="Phone" class="icon" />
-          (661) 214-9212
-        </a>
-        <a href="https://instagram.com/scv.tech" target="_blank">
-          <img src="images/Instagram-icon.png" alt="Instagram" class="icon" />
-          @scv.tech
-        </a>
-        <a href="https://nextdoor.com/pages/scv-tech-castaic-ca/" target="_blank">
-          <img src="images/nextdoor-icon.png" alt="Nextdoor" class="icon" />
-          SCV Tech
-        </a>
+        <a href="tel:6612149212"><img src="images/phone-icon.png" alt="Phone" class="icon" />(661) 214-9212</a>
+        <a href="https://instagram.com/scv.tech" target="_blank"><img src="images/Instagram-icon.png" alt="Instagram" class="icon" />@scv.tech</a>
+        <a href="https://nextdoor.com/pages/scv-tech-castaic-ca/" target="_blank"><img src="images/nextdoor-icon.png" alt="Nextdoor" class="icon" />SCV Tech</a>
       </div>
     </div>
-
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -61,6 +133,7 @@
     <p class="intro">
       SCV Tech proudly serves residential and commercial clients within a 100-mile radius of Santa Clarita. We specialize in home theater, audio/video, lighting, smart home automation, security, and low-voltage services throughout Southern California.
     </p>
+    <div class="toggle-button" onclick="toggleCities()">Show/Hide Cities</div>
     <div class="city-columns">
       <ul>
         <li>Santa Clarita</li><li>Valencia</li><li>Saugus</li><li>Canyon Country</li><li>Newhall</li><li>Castaic</li><li>Stevenson Ranch</li><li>Sand Canyon</li><li>Val Verde</li>
@@ -84,6 +157,11 @@
     backToTopButton.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    function toggleCities() {
+      const cityList = document.querySelector('.city-columns ul');
+      cityList.style.display = cityList.style.display === 'block' ? 'none' : 'block';
+    }
   </script>
 
   <!-- Tidio Chat -->
