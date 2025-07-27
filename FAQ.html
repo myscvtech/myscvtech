@@ -193,6 +193,32 @@
 </html>
 
 
+
+#back-to-top {
+  position: fixed;
+  bottom: 220px;  /* ↑ moved higher for desktop */
+  right: 30px;
+  font-size: 24px;
+  background-color: #3b82f6;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  #back-to-top {
+    bottom: 250px;  /* ↑ moved even higher for mobile */
+    right: 20px;
+  }
+}
+
+
+
 <!-- Tidio Chat -->
 <script src="//code.tidio.co/2hqvbkrus0bplpiymttoeuroyi8v86zz.js" async></script>
 </body>
