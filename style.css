@@ -1232,3 +1232,27 @@ body.gallery-page,
     column-count: 1;
   }
 }
+
+#back-to-top {
+  position: fixed;
+  bottom: 100px; /* moved up to avoid Tidio */
+  right: 30px;
+  font-size: 24px;
+  background-color: #3b82f6;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  #back-to-top {
+    bottom: 110px; /* even higher on mobile */
+    right: 20px;
+  }
+}
+
