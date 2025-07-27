@@ -1115,6 +1115,21 @@ body.gallery-page,
   z-index: 1;
 }
 
+/* Shared layout styles for About and Service Area boxes */
+.content-box {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  max-width: 850px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+
 .content-box {
   background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(4px);
