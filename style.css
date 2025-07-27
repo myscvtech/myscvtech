@@ -1274,3 +1274,22 @@ body.gallery-page,
     bottom: 140px !important;
   }
 }
+
+
+
+
+
+
+/* Consistent Box Styling for Homepage and Other Sections */
+.content-box {
+  background-color: rgba(255, 255, 255, 0.85); /* Matches About/Service box */
+  backdrop-filter: blur(4px);                 /* Optional blur effect */
+  max-width: 850px;
+  width: 100%;
+  margin: 2rem auto;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  text-align: center;
+}
