@@ -164,6 +164,30 @@
     }
   </script>
 
+
+   <!-- Back to Top Logic -->
+<script>
+  const backToTopButton = document.getElementById('back-to-top');
+  window.addEventListener('scroll', function () {
+    backToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+  backToTopButton.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Tidio Chat Position Adjuster
+  function adjustTidioPosition() {
+    const tidio = document.querySelector('.tidio-chat-launcher');
+    if (tidio) {
+      tidio.style.bottom = window.innerWidth <= 768 ? '140px' : '120px';
+    } else {
+      setTimeout(adjustTidioPosition, 500);
+    }
+  }
+  adjustTidioPosition();
+</script>
+
+
   <!-- Tidio Chat -->
   <script src="//code.tidio.co/2hqvbkrus0bplpiymttoeuroyi8v86zz.js" async></script>
 </body>
