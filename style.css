@@ -1256,3 +1256,14 @@ body.gallery-page,
   }
 }
 
+
+/* Move Tidio chat button up */
+.tidio-chat-launcher {
+  bottom: 120px !important; /* adjust as needed */
+}
+
+@media (max-width: 768px) {
+  .tidio-chat-launcher {
+    bottom: 140px !important;
+  }
+}
