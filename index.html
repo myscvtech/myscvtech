@@ -92,7 +92,7 @@
     </div>
   </section>
 
-  <!-- Blog Section (auto-filled from blog.html) -->
+  <!-- Blog Section (auto-filled with newest 5 from blog page) -->
   <section class="blog-section">
     <div class="blog-box">
       <h2>From Our Blog</h2>
@@ -114,48 +114,59 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // ----- Auto-populate blog list from blog.html -----
+    // ===== Auto-populate blog list (latest 5) from blog page =====
     (function loadBlogTitles() {
       const list = document.getElementById('blog-links');
       if (!list) return;
 
+      // Try both lowercase and capitalized blog filenames
       const blogPaths = ['blog.html', 'Blog.html'];
 
-      function pickTitleElement(doc) {
+      // Turn heading text into a URL-safe slug
+      function slugify(text) {
+        return text.toLowerCase()
+          .replace(/[^a-z0-9\s-]/g, '')
+          .trim()
+          .replace(/\s+/g, '-')
+          .replace(/-+/g, '-');
+      }
+
+      function extractItems(doc, basePath) {
+        // 1) Prefer linked titles
         let nodes = doc.querySelectorAll(
           '.blog-title a, .post-title a, article h1 a, article h2 a, article .title a, .blog-card h2 a, .entry-title a'
         );
         if (nodes.length) {
-          return Array.from(nodes).map(a => ({ text: a.textContent.trim(), href: a.getAttribute('href') }));
+          return Array.from(nodes).map(a => ({
+            text: a.textContent.trim(),
+            href: a.getAttribute('href')
+          })).filter(x => x.text);
         }
 
-        // If there are headings without links, build anchors from IDs
-        const headingCandidates = doc.querySelectorAll(
-          'article h1[id], article h2[id], section[id] h1, section[id] h2, h2[id], h1[id]'
+        // 2) No linked titles? Use headings and build fragment links
+        const headings = doc.querySelectorAll(
+          'article h1, article h2, .blog-card h2, .post h2, .entry h2, main h2'
         );
-        if (headingCandidates.length) {
-          return Array.from(headingCandidates).map(h => {
-            let id = h.id || (h.closest('section[id], article[id]')?.id) || '';
-            return { text: h.textContent.trim(), href: id ? `#${id}` : null };
-          }).filter(x => x.text && x.href);
+        if (headings.length) {
+          return Array.from(headings).map(h => {
+            const text = h.textContent.trim();
+            const id = h.id || slugify(text);
+            return { text, href: `#${id}` };
+          }).filter(x => x.text);
         }
 
-        // Fallback: any <a> inside articles that looks like a post
-        nodes = doc.querySelectorAll('article a[href*=".html"], .blog-card a[href*=".html"]');
-        if (nodes.length) {
-          return Array.from(nodes).map(a => ({ text: a.textContent.trim(), href: a.getAttribute('href') }))
-                        .filter(x => x.text);
-        }
         return [];
       }
 
-      function renderList(items, basePath) {
+      function renderLatest(items, basePath, limit = 5) {
         if (!items.length) {
           list.innerHTML = `<li><a href="${basePath}">View our latest posts →</a></li>`;
           return;
         }
+        // Newest first: assume blog page lists newest first already
+        const latest = items.slice(0, limit);
         const frag = document.createDocumentFragment();
-        items.forEach(item => {
+        latest.forEach(item => {
           const li = document.createElement('li');
           const a = document.createElement('a');
           a.href = item.href?.startsWith('#') ? (basePath + item.href) : (item.href || basePath);
@@ -170,19 +181,17 @@
       (async function tryFetch() {
         for (const path of blogPaths) {
           try {
-            const res = await fetch(path, { credentials: 'same-origin' });
+            const res = await fetch(path, { credentials: 'same-origin', cache: 'no-store' });
             if (!res.ok) continue;
             const html = await res.text();
             const doc = new DOMParser().parseFromString(html, 'text/html');
-            const items = pickTitleElement(doc);
-            renderList(items, path);
+            const items = extractItems(doc, path);
+            renderLatest(items, path, 5);
             return;
-          } catch (e) {
-            // try next
-          }
+          } catch (e) { /* try next */ }
         }
         // If both fail
-        renderList([], 'blog.html');
+        renderLatest([], 'blog.html', 5);
       })();
     })();
   </script>
