@@ -77,9 +77,72 @@
     }
   </style>
 
+  <!-- Blog polish overrides (adds depth without changing your site’s bg/colors) -->
+  <style id="blog-toc-tune">
+    /* Only blog page small tweaks — no global overrides */
 
- 
+    /* Header card: keep your bg visible, soften white */
+    .hero-content{
+      background-color: rgba(255,255,255,0.68) !important; /* down from ~0.85 */
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      backdrop-filter: blur(2px) saturate(1.03);
+    }
 
+    /* TOC card: less white slab, clearer structure */
+    #blog-toc{
+      background: rgba(255,255,255,0.72);
+      border: 1px solid #e5e7eb;
+      border-left: 4px solid #3b82f6;    /* subtle accent bar */
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.08);
+      max-width: 1000px;
+      padding: 14px 18px;
+      margin: 18px auto 22px;
+      backdrop-filter: blur(2px) saturate(1.03);
+    }
+    #blog-toc h2{
+      margin: 0 0 10px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #1f2937;
+    }
+    #blog-toc ul{
+      list-style: none;
+      padding: 0; margin: 0;
+      columns: 1; column-gap: 24px;
+    }
+    @media (min-width: 900px){
+      #blog-toc ul{ columns: 2; }
+    }
+    #blog-toc li{ margin: 6px 0; break-inside: avoid; }
+    #blog-toc a{
+      color: #2563eb;
+      text-decoration: none;
+      padding: 4px 6px;
+      border-radius: 8px;
+    }
+    #blog-toc a:hover{
+      background: rgba(59,130,246,0.08);
+      text-decoration: none;
+    }
+
+    /* Posts: a touch more separation so they don’t blend */
+    .blog-post{
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 18px rgba(0,0,0,.06);
+    }
+    .blog-post h2{ color:#1f2937; }
+
+    /* Divider softened */
+    .divider{
+      width: 94%;
+      height: 2px;
+      margin: 26px auto 32px;
+      background: linear-gradient(90deg, transparent, #c7d2fe 20%, #93c5fd 50%, #c7d2fe 80%, transparent);
+    }
+  </style>
 </head>
 <body>
 
@@ -576,6 +639,7 @@
        📍 Proudly serving Santa Clarita and surrounding areas</p>
 
     <p><em>🎁 Bonus: Mention this blog for a free system checkup or quote on Sonos installation!</em></p>
+
     <p class="tags">#sonosintegration #wirelessaudio #smarthomeaudio #scvtech #sonosinstaller #lowvoltageaudio #control4integration #santaclaritahomes #sonossystem</p>
   </div>
 
