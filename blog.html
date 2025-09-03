@@ -16,16 +16,48 @@
     /* Base/text */
     html, body { margin: 0; padding: 0; font-family: 'Helvetica Neue','Segoe UI',sans-serif; color: #000; }
 
-    /* Center the hero headline + keep readable on all screens */
+    /* Header area: keep bg image visible; center content */
     .hero-content {
       position: relative;
-      padding: 60px 20px;
-      background-color: rgba(255,255,255,0.85);
-      overflow-y: auto;
+      padding: 56px 20px 28px;
+      background: transparent;                 /* let the site background image shine through */
+      overflow: visible;
       display: flex;
       flex-direction: column;
-      align-items: center; /* center */
-      text-align: center;  /* center */
+      align-items: center;
+      text-align: center;
+    }
+    /* Headline: stronger hierarchy + elegant underline */
+    .hero-content h1{
+      font-size: 36px;
+      color: #0f172a;
+      margin: 0 0 14px;
+      padding: 4px 10px;
+      border-radius: 8px;
+      backdrop-filter: blur(2px) saturate(1.02);
+      background: rgba(255,255,255,0.55);
+      border: 1px solid rgba(15,23,42,0.06);
+      position: relative;
+    }
+    .hero-content h1::after{
+      content:"";
+      position: absolute;
+      left: 50%; transform: translateX(-50%);
+      bottom: -10px;
+      width: 220px; height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #60a5fa, #3b82f6);
+    }
+    /* Intro line: readable chip over photo */
+    .hero-content p{
+      margin: 18px 0 8px;
+      max-width: 880px;
+      color: #0f172a !important;
+      background: rgba(255,255,255,0.6);
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(15,23,42,0.06);
+      backdrop-filter: blur(2px);
     }
 
     /* Blog post card */
@@ -35,36 +67,53 @@
       background-color: rgba(255,255,255,0.95);
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
     }
     .blog-post img {
       width: 80%; max-width: 500px; height: auto;
       border-radius: 8px; margin: 0 auto 20px; display: block;
     }
-    .blog-post h2 { color: #2c3e50; margin-bottom: 10px; }
+    .blog-post h2 { color: #1f2937; margin-bottom: 10px; }
     .blog-post p, .blog-post li, .blog-post a { font-size: 16px; color: #000; line-height: 1.6; text-decoration: none; }
     .blog-post ul { list-style-type: disc; padding-left: 20px; margin-bottom: 20px; }
     .blog-post .tags { font-size: 14px; color: #666; margin-top: 10px; }
 
     /* Divider */
     .divider {
-      width: 80%; height: 2px;
-      background: linear-gradient(to right, #4f46e5, #3b82f6);
-      margin: 40px auto; border: none;
+      width: 94%; height: 2px;
+      background: linear-gradient(90deg, transparent, #c7d2fe 20%, #93c5fd 50%, #c7d2fe 80%, transparent);
+      margin: 28px auto; border: none;
     }
 
-    /* TOC (Table of Contents) */
+    /* TOC (Table of Contents) — glass card */
     #blog-toc {
-      max-width: 900px; margin: 20px auto 30px; padding: 16px 20px;
-      background: rgba(255,255,255,0.9); border: 1px solid #e5e7eb; border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      max-width: 960px;
+      margin: 18px auto 22px;
+      padding: 22px 26px;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid #dbe2ee;
+      border-left: 4px solid #3b82f6;
+      border-radius: 16px;
+      box-shadow: 0 6px 22px rgba(2,6,23,0.10);
+      backdrop-filter: blur(3px) saturate(1.03);
     }
-    #blog-toc h2 { margin: 0 0 10px; font-size: 22px; font-weight: 700; }
-    #blog-toc ul { list-style: none; padding: 0; margin: 0; columns: 1; }
-    #blog-toc li { margin: 8px 0; break-inside: avoid; }
-    #blog-toc a { color: #00588a; text-decoration: none; }
-    #blog-toc a:hover { text-decoration: underline; }
-    @media (min-width: 768px) { #blog-toc ul { columns: 2; column-gap: 32px; } }
+    #blog-toc:focus { outline: none; }
+    #blog-toc h2 { margin: 0 0 12px; font-size: 20px; font-weight: 800; color: #1f2937; text-align: center; }
+    #blog-toc ul { list-style: none; padding: 0; margin: 8px 0 0; columns: 1; column-gap: 36px; }
+    #blog-toc li { margin: 10px 0; break-inside: avoid; }
+    #blog-toc a {
+      display: inline-block;
+      line-height: 1.35;
+      padding: 6px 8px;
+      border-radius: 8px;
+      color: #1d4ed8;
+      text-decoration: none;
+    }
+    #blog-toc a:hover { background: rgba(59,130,246,0.10); text-decoration: none; }
+    #blog-toc a:focus-visible { outline: 2px solid #93c5fd; outline-offset: 2px; background: rgba(59,130,246,0.10); }
+    @media (min-width: 900px){ #blog-toc ul{ columns: 2; } }
+
     /* Keep anchored targets visible below fixed nav (if any) */
     h2[id], h1[id] { scroll-margin-top: 100px; }
 
@@ -74,73 +123,7 @@
       background-color: #3b82f6; color: #fff;
       padding: 10px 15px; border-radius: 50%; cursor: pointer;
       display: none; font-size: 20px; z-index: 1000;
-    }
-  </style>
-
-  <!-- Blog polish overrides (adds depth without changing your site’s bg/colors) -->
-  <style id="blog-toc-tune">
-    /* Only blog page small tweaks — no global overrides */
-
-    /* Header card: keep your bg visible, soften white */
-    .hero-content{
-      background-color: rgba(255,255,255,0.68) !important; /* down from ~0.85 */
-      border: 1px solid rgba(0,0,0,0.06);
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      backdrop-filter: blur(2px) saturate(1.03);
-    }
-
-    /* TOC card: less white slab, clearer structure */
-    #blog-toc{
-      background: rgba(255,255,255,0.72);
-      border: 1px solid #e5e7eb;
-      border-left: 4px solid #3b82f6;    /* subtle accent bar */
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,.08);
-      max-width: 1000px;
-      padding: 14px 18px;
-      margin: 18px auto 22px;
-      backdrop-filter: blur(2px) saturate(1.03);
-    }
-    #blog-toc h2{
-      margin: 0 0 10px;
-      font-size: 20px;
-      font-weight: 700;
-      color: #1f2937;
-    }
-    #blog-toc ul{
-      list-style: none;
-      padding: 0; margin: 0;
-      columns: 1; column-gap: 24px;
-    }
-    @media (min-width: 900px){
-      #blog-toc ul{ columns: 2; }
-    }
-    #blog-toc li{ margin: 6px 0; break-inside: avoid; }
-    #blog-toc a{
-      color: #2563eb;
-      text-decoration: none;
-      padding: 4px 6px;
-      border-radius: 8px;
-    }
-    #blog-toc a:hover{
-      background: rgba(59,130,246,0.08);
-      text-decoration: none;
-    }
-
-    /* Posts: a touch more separation so they don’t blend */
-    .blog-post{
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 4px 18px rgba(0,0,0,.06);
-    }
-    .blog-post h2{ color:#1f2937; }
-
-    /* Divider softened */
-    .divider{
-      width: 94%;
-      height: 2px;
-      margin: 26px auto 32px;
-      background: linear-gradient(90deg, transparent, #c7d2fe 20%, #93c5fd 50%, #c7d2fe 80%, transparent);
+      box-shadow: 0 6px 18px rgba(59,130,246,0.28);
     }
   </style>
 </head>
@@ -169,10 +152,9 @@
 
   <!-- Hero / Intro -->
   <div class="hero-content">
-    <h1 style="font-size:36px;color:black;margin-bottom:40px;border-bottom:3px solid #3b82f6;padding-bottom:10px;">SCV Tech Blog</h1>
+    <h1>SCV Tech Blog</h1>
 
-    <!-- Cleaned: removed stray ".</li>" and malformed paragraph attributes -->
-    <p style="max-width: 800px; margin: 0 auto 20px; color:#000;">
+    <p>
       Security is no longer optional — it’s a critical part of your business technology stack. We make it simple, scalable, and reliable.
     </p>
 
@@ -670,7 +652,7 @@
       const slugify = (t) => String(t)
         .toLowerCase()
         .replace(/&/g,' and ')
-        .replace(/[^a-z0-9\\s_\\-]/g,'')   // keep letters, numbers, space, underscore, hyphen
+        .replace(/[^a-z0-9\\s_\\-]/g,'')
         .trim()
         .replace(/\\s+/g,'-')
         .replace(/-+/g,'-');
@@ -688,10 +670,8 @@
         list.appendChild(li);
       });
 
-      // Reveal TOC once built
       toc.style.display = 'block';
 
-      // If landing with a hash, smooth-scroll to it
       if (location.hash) {
         const target = document.getElementById(location.hash.slice(1));
         if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
