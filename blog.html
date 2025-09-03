@@ -9,7 +9,7 @@
 
   <link rel="stylesheet" href="style.css" />
 
-  <!-- TOC styles (scoped) -->
+  <!-- TOC + post styles (scoped) -->
   <style>
     :root { scroll-behavior: smooth; }
     /* If you have a fixed navbar, keep anchors from hiding under it */
@@ -42,7 +42,6 @@
       #blog-toc ul { columns: 2; column-gap: 32px; }
     }
 
-    /* Light post styling (safe if your style.css already handles this) */
     main.blog-main {
       max-width: 900px;
       margin: 30px auto 80px;
@@ -68,6 +67,17 @@
     }
     .blog-post p { line-height: 1.7; margin: 10px 0; }
 
+    /* Responsive images */
+    .blog-figure {
+      margin: 10px 0 16px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .blog-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .post-cta {
       margin-top: 16px;
       font-size: 14px;
@@ -158,14 +168,6 @@
       <p>Add smart lighting along pathways and seating—it’s safer and it looks awesome.</p>
     </article>
 
-    <!-- Add more posts below using the same pattern:
-    <article class="blog-post">
-      <h2 class="blog-title">Your Post Title</h2>
-      <div class="blog-meta">Posted Month DD, YYYY · By SCV Tech</div>
-      <p>Your content...</p>
-    </article>
-    -->
-
   </main>
 
   <!-- Back to Top Button (optional) -->
@@ -181,7 +183,7 @@
     })();
   </script>
 
-  <!-- Build TOC + IDs (homepage reads these titles, too) -->
+  <!-- Build TOC + IDs -->
   <script>
     (function buildBlogTOC() {
       const main = document.querySelector('main.blog-main') || document.querySelector('main') || document.body;
@@ -232,6 +234,69 @@
         const target = document.getElementById(location.hash.slice(1));
         if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
       }
+    })();
+  </script>
+
+  <!-- Auto-insert feature images for each post (no edits needed) -->
+  <script>
+    (function insertPostImages() {
+      // Try common folders and extensions based on the post title slug
+      const roots = ['images/blog/', 'blog-images/', 'images/'];
+      const exts  = ['.jpg', '.jpeg', '.png', '.webp'];
+
+      function slugify(text) {
+        return text.toLowerCase()
+          .replace(/[^a-z0-9\s-]/g, '')
+          .trim()
+          .replace(/\s+/g, '-')
+          .replace(/-+/g, '-');
+      }
+
+      // Check if an image URL exists (200 OK)
+      async function findExisting(srcCandidates) {
+        for (const src of srcCandidates) {
+          try {
+            const res = await fetch(src, { method: 'HEAD', cache: 'no-store', credentials: 'same-origin' });
+            if (res.ok) return src;
+          } catch(e) { /* try next */ }
+        }
+        return null;
+      }
+
+      // For each post, if it doesn't already have an img near the top, try to add one
+      const posts = document.querySelectorAll('article.blog-post');
+      posts.forEach(async (post) => {
+        const hasImageAlready = post.querySelector('img');
+        if (hasImageAlready) return;
+
+        const titleEl = post.querySelector('.blog-title');
+        if (!titleEl) return;
+
+        const slug = slugify(titleEl.textContent || '');
+        if (!slug) return;
+
+        const candidates = [];
+        roots.forEach(r => exts.forEach(ext => candidates.push(r + slug + ext)));
+
+        const found = await findExisting(candidates);
+        if (!found) return;
+
+        const fig = document.createElement('figure');
+        fig.className = 'blog-figure';
+        const img = document.createElement('img');
+        img.loading = 'lazy';
+        img.alt = titleEl.textContent.trim();
+        img.src = found;
+        fig.appendChild(img);
+
+        // Insert figure right after the title
+        const meta = post.querySelector('.blog-meta');
+        if (meta) {
+          meta.insertAdjacentElement('afterend', fig);
+        } else {
+          titleEl.insertAdjacentElement('afterend', fig);
+        }
+      });
     })();
   </script>
 
