@@ -6,85 +6,44 @@
 
   <title>SCV Tech Blog | AV Tips, Smart Home Ideas, Security & Lighting</title>
   <meta name="description" content="Read expert AV and smart home installation tips, security camera guides, lighting upgrades, and home technology blogs from SCV Tech.">
-
   <link rel="stylesheet" href="style.css" />
 
-  <!-- TOC + post styles (scoped) -->
   <style>
     :root { scroll-behavior: smooth; }
-    /* If you have a fixed navbar, keep anchors from hiding under it */
+    /* Center hero text on desktop and keep it readable */
+    .hero-banner .hero-overlay {
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      text-align:center; min-height: 260px; padding: 24px;
+    }
+    /* Keep anchor targets visible below a fixed navbar */
     h2[id], h1[id] { scroll-margin-top: 100px; }
 
+    /* TOC styles */
     #blog-toc {
-      max-width: 900px;
-      margin: 20px auto 30px;
-      padding: 16px 20px;
-      background: rgba(255,255,255,0.9);
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
+      max-width: 900px; margin: 20px auto 30px; padding: 16px 20px;
+      background: rgba(255,255,255,0.9); border: 1px solid #e5e7eb; border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.06);
     }
-    #blog-toc h2 {
-      margin: 0 0 10px;
-      font-size: 22px;
-      font-weight: 700;
-    }
-    #blog-toc ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      columns: 1;
-    }
-    #blog-toc li { margin: 8px 0; break-inside: avoid; }
-    #blog-toc a { text-decoration: none; color: #00588a; }
-    #blog-toc a:hover { text-decoration: underline; }
-    @media (min-width: 768px) {
-      #blog-toc ul { columns: 2; column-gap: 32px; }
-    }
+    #blog-toc h2 { margin:0 0 10px; font-size:22px; font-weight:700; }
+    #blog-toc ul { list-style:none; padding:0; margin:0; columns:1; }
+    #blog-toc li { margin:8px 0; break-inside:avoid; }
+    #blog-toc a { color:#00588a; text-decoration:none; }
+    #blog-toc a:hover { text-decoration:underline; }
+    @media (min-width:768px){ #blog-toc ul { columns:2; column-gap:32px; } }
 
-    main.blog-main {
-      max-width: 900px;
-      margin: 30px auto 80px;
-      padding: 0 16px;
-    }
+    /* Post layout */
+    main.blog-main { max-width: 900px; margin: 30px auto 80px; padding: 0 16px; }
     article.blog-post {
-      background: rgba(255,255,255,0.95);
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 20px;
-      margin: 18px 0 26px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background: rgba(255,255,255,0.95); border: 1px solid #e5e7eb; border-radius: 12px;
+      padding: 20px; margin: 18px 0 26px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
-    .blog-title {
-      font-size: 26px;
-      margin: 0 0 10px;
-      font-weight: 700;
-    }
-    .blog-meta {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 14px;
-    }
+    .blog-title { font-size: 26px; margin: 0 0 10px; font-weight: 700; }
+    .blog-meta { font-size: 14px; color:#666; margin-bottom: 14px; }
     .blog-post p { line-height: 1.7; margin: 10px 0; }
 
-    /* Responsive images */
-    .blog-figure {
-      margin: 10px 0 16px;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .blog-figure img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .post-cta {
-      margin-top: 16px;
-      font-size: 14px;
-      color: #444;
-    }
-    .post-cta a { color: #00588a; text-decoration: none; }
-    .post-cta a:hover { text-decoration: underline; }
+    /* Feature images (inserted automatically if not present) */
+    .blog-figure { margin: 10px 0 16px; border-radius: 12px; overflow: hidden; }
+    .blog-figure img { width:100%; height:auto; display:block; }
   </style>
 </head>
 <body>
@@ -94,21 +53,11 @@
     <div class="logo-and-icons">
       <img src="images/logo.png" alt="SCV Tech Logo" class="logo" />
       <div class="contact-icons">
-        <a href="tel:6612149212">
-          <img src="images/phone-icon.png" alt="Phone" class="icon" />
-          (661) 214-9212
-        </a>
-        <a href="https://instagram.com/scv.tech" target="_blank" rel="noopener">
-          <img src="images/Instagram-icon.png" alt="Instagram" class="icon" />
-          @scv.tech
-        </a>
-        <a href="https://nextdoor.com/pages/scv-tech-castaic-ca/" target="_blank" rel="noopener">
-          <img src="images/nextdoor-icon.png" alt="Nextdoor" class="icon" />
-          SCV Tech
-        </a>
+        <a href="tel:6612149212"><img src="images/phone-icon.png" alt="Phone" class="icon" /> (661) 214-9212</a>
+        <a href="https://instagram.com/scv.tech" target="_blank" rel="noopener"><img src="images/Instagram-icon.png" alt="Instagram" class="icon" /> @scv.tech</a>
+        <a href="https://nextdoor.com/pages/scv-tech-castaic-ca/" target="_blank" rel="noopener"><img src="images/nextdoor-icon.png" alt="Nextdoor" class="icon" /> SCV Tech</a>
       </div>
     </div>
-
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -120,24 +69,24 @@
     </ul>
   </nav>
 
-  <!-- Hero (optional) -->
+  <!-- Hero -->
   <section class="hero-banner">
     <div class="hero-overlay">
       <h1>From the SCV Tech Blog</h1>
-      <p>Tips, walkthroughs, and inspiration for AV, security & smart lighting</p>
+      <p>Tips, walkthroughs, and inspiration for AV, security &amp; smart lighting</p>
     </div>
   </section>
 
-  <!-- TOC will be injected at top of main -->
+  <!-- TOC injected at top of main -->
   <main class="blog-main">
 
-    <!-- ======= BLOG POSTS (current set) ======= -->
+    <!-- ======= BLOG POSTS (ALL visible; keep adding more blocks) ======= -->
+
     <article class="blog-post">
       <h2 class="blog-title">Top 5 Smart Home Upgrades in 2025</h2>
       <div class="blog-meta">Posted May 28, 2025 · By SCV Tech</div>
-      <p>Want a smarter home without a full remodel? These five upgrades add convenience, security, and real value: smart thermostats, video doorbells, scene-based lighting, whole-home Wi-Fi, and voice-controlled AV. We typically pair app control with physical keypads so guests and family can use the system comfortably.</p>
-      <p>Pro tip: plan scenes (e.g., “Movie Night,” “Away,” “Patio”) up front; we’ll map them to wall controls and phone widgets so they’re one-tap simple.</p>
-      <div class="post-cta">Questions? DM us on <a href="https://instagram.com/scv.tech" target="_blank" rel="noopener">@scv.tech</a> or request a quote on our <a href="contact.html">Contact</a> page.</div>
+      <p>Want a smarter home without a full remodel? These five upgrades add convenience, security, and real value: smart thermostats, video doorbells, scene-based lighting, whole-home Wi-Fi, and voice-controlled AV. We pair app control with physical keypads so guests and family can use the system comfortably.</p>
+      <p>Plan scenes up front (“Movie Night,” “Away,” “Patio”) and we’ll map them to wall controls and phone widgets for one-tap simplicity.</p>
     </article>
 
     <article class="blog-post">
@@ -150,35 +99,63 @@
     <article class="blog-post">
       <h2 class="blog-title">Protecting Your Business with Smart Security</h2>
       <div class="blog-meta">Posted April 19, 2025 · By SCV Tech</div>
-      <p>For storefronts and offices, we recommend IP cameras with NVRs (longer retention, better detail), access control at employee/stock entrances, and motion-activated lighting. Mobile alerts and AI-based detection reduce false notifications while keeping you in the loop from anywhere.</p>
-      <p>We can integrate your cameras with smart locks and schedules, so vendors get access only when they should—and you have a full audit trail.</p>
+      <p>For storefronts and offices, we recommend IP cameras with NVRs (longer retention, better detail), access control at employee/stock entrances, and motion-activated lighting. Mobile alerts and AI detection reduce false notifications while keeping you in the loop from anywhere.</p>
+      <p>We can integrate cameras with smart locks and schedules so vendors get access only when they should—and you have a full audit trail.</p>
     </article>
 
     <article class="blog-post">
       <h2 class="blog-title">AV Pre-Wiring vs. Retrofitting: What’s Better?</h2>
       <div class="blog-meta">Posted March 30, 2025 · By SCV Tech</div>
-      <p>Pre-wiring during construction is fastest and cheapest long-term: pull extra Cat6 and speaker lines to common zones and rack locations. Retrofitting still works—expect a bit more time for fishing cables and patch/paint. Either way, we label everything and leave a tidy rack you (and future you) will love.</p>
-      <p>Rule of thumb: wire for today’s needs + at least one spare per location. You’ll thank yourself later.</p>
+      <p>Pre-wiring during construction is fastest and most cost-effective long-term: pull extra Cat6 and speaker lines to common zones and rack locations. Retrofitting still works—expect more time for fishing cables and patch/paint. Either way, we label everything and leave a tidy rack that’s easy to service later.</p>
+      <p>Rule of thumb: wire for today’s needs + at least one spare per location.</p>
     </article>
 
     <article class="blog-post">
-      <h2 class="blog-title">Outdoor AV: Weather-Ready Speakers & TVs</h2>
+      <h2 class="blog-title">Outdoor AV: Weather-Ready Speakers &amp; TVs</h2>
       <div class="blog-meta">Posted March 5, 2025 · By SCV Tech</div>
-      <p>Backyard movie nights and poolside playlists need gear that can handle heat, cold, and moisture. We use weather-rated speakers/TVs, burial-rated wire, and surge protection. Zone control lets you keep it loud outside and quiet inside. For HOA-friendly setups, we can keep hardware discreet and cable runs invisible.</p>
+      <p>Backyard movie nights and poolside playlists need gear that handles heat, cold, and moisture. We use weather-rated speakers/TVs, burial-rated wire, and surge protection. Zone control keeps it loud outside and quiet inside.</p>
       <p>Add smart lighting along pathways and seating—it’s safer and it looks awesome.</p>
+    </article>
+
+    <!-- Extra posts (to ensure >5 appear) -->
+    <article class="blog-post">
+      <h2 class="blog-title">Choosing the Right Security Camera System (NVR vs DVR)</h2>
+      <div class="blog-meta">Posted February 18, 2025 · By SCV Tech</div>
+      <p>NVRs work with IP cameras and deliver higher resolutions, smarter analytics, and simpler wiring. DVRs pair with analog cameras and are fine for basic coverage. We’ll size storage for your retention goals.</p>
+    </article>
+
+    <article class="blog-post">
+      <h2 class="blog-title">Whole-Home Wi-Fi: Mesh vs. Single Router</h2>
+      <div class="blog-meta">Posted January 28, 2025 · By SCV Tech</div>
+      <p>Mesh systems eliminate dead zones with multiple nodes. We place them strategically and wire backhaul where possible for maximum stability and speed across the home.</p>
+    </article>
+
+    <article class="blog-post">
+      <h2 class="blog-title">TV Mounting &amp; Cable Concealment: What to Expect</h2>
+      <div class="blog-meta">Posted December 12, 2024 · By SCV Tech</div>
+      <p>From stud finding to power relocation and in-wall rated HDMI, we make the TV float with no visible cables—clean, safe, and renter-friendly options available.</p>
+    </article>
+
+    <article class="blog-post">
+      <h2 class="blog-title">Low Voltage Lighting Ideas for Curb Appeal</h2>
+      <div class="blog-meta">Posted November 3, 2024 · By SCV Tech</div>
+      <p>Path lights, uplighting, and deck accents boost safety and style. We use 12/24V LED systems, smart timers, and app control for seasonal scenes and schedules.</p>
+    </article>
+
+    <article class="blog-post">
+      <h2 class="blog-title">Sonos Setup Tips for Seamless Multi-Room Audio</h2>
+      <div class="blog-meta">Posted October 15, 2024 · By SCV Tech</div>
+      <p>Group rooms, match volumes, and tune with Trueplay. For larger homes, we often combine Sonos with in-ceiling speakers and an amp for invisible, even sound.</p>
     </article>
 
   </main>
 
-  <!-- Back to Top Button (optional) -->
+  <!-- Back to Top -->
   <div id="back-to-top" aria-label="Back to top" title="Back to top">&#8679;</div>
   <script>
-    // Back to top behavior
     (function(){
       const btn = document.getElementById('back-to-top');
-      window.addEventListener('scroll', () => {
-        btn.style.display = window.scrollY > 300 ? 'block' : 'none';
-      });
+      window.addEventListener('scroll', () => btn.style.display = window.scrollY > 300 ? 'block' : 'none');
       btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     })();
   </script>
@@ -187,115 +164,105 @@
   <script>
     (function buildBlogTOC() {
       const main = document.querySelector('main.blog-main') || document.querySelector('main') || document.body;
-
-      // Create TOC container
-      const toc = document.createElement('nav');
-      toc.id = 'blog-toc';
-      toc.innerHTML = '<h2>Browse Posts</h2><ul></ul>';
-
-      // Find headings that represent posts
-      const selectors = [
-        '.blog-title', '.post-title',
-        'article h1', 'article h2',
-        '.blog-card h2', '.post h2', '.entry h2', 'main h2'
-      ];
-      const headings = main.querySelectorAll(selectors.join(', '));
+      const toc = document.createElement('nav'); toc.id='blog-toc'; toc.innerHTML='<h2>Browse Posts</h2><ul></ul>';
       const list = toc.querySelector('ul');
+
+      const headings = main.querySelectorAll('.blog-title, article h1, article h2');
       if (!headings.length) return;
 
-      // Slugify: turn title text into a URL-friendly id
-      function slugify(text) {
-        return text.toLowerCase()
-          .replace(/[^a-z0-9\s-]/g, '')
-          .trim()
-          .replace(/\s+/g, '-')
-          .replace(/-+/g, '-');
-      }
+      const slugify = t => t.toLowerCase()
+        .replace(/[^a-z0-9\s-_&]/g,'')
+        .trim()
+        .replace(/&/g,'and')
+        .replace(/\s+/g,'-')
+        .replace(/-+/g,'-');
 
-      // Ensure IDs + build TOC links
-      headings.forEach(h => {
-        const text = (h.textContent || '').trim();
-        if (!text) return;
+      headings.forEach(h=>{
+        const text = (h.textContent||'').trim(); if (!text) return;
         if (!h.id) h.id = slugify(text);
-
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.href = `#${h.id}`;
-        a.textContent = text;
-        li.appendChild(a);
-        list.appendChild(li);
+        const li=document.createElement('li'); const a=document.createElement('a');
+        a.href = `#${h.id}`; a.textContent = text; li.appendChild(a); list.appendChild(li);
       });
-
-      // Insert TOC at the very top of main
       main.insertBefore(toc, main.firstChild);
 
-      // If arriving with a hash (from homepage), scroll once IDs are ready
-      if (location.hash) {
-        const target = document.getElementById(location.hash.slice(1));
-        if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+      if (location.hash){
+        const t=document.getElementById(location.hash.slice(1));
+        if (t) setTimeout(()=>t.scrollIntoView({behavior:'smooth',block:'start'}),50);
       }
     })();
   </script>
 
-  <!-- Auto-insert feature images for each post (no edits needed) -->
+  <!-- Smart image finder: uses your ORIGINAL GitHub filenames (no renaming) -->
   <script>
-    (function insertPostImages() {
-      // Try common folders and extensions based on the post title slug
-      const roots = ['images/blog/', 'blog-images/', 'images/'];
-      const exts  = ['.jpg', '.jpeg', '.png', '.webp'];
+    (function smartImages() {
+      const posts = document.querySelectorAll('article.blog-post');
+      if (!posts.length) return;
 
-      function slugify(text) {
-        return text.toLowerCase()
-          .replace(/[^a-z0-9\s-]/g, '')
-          .trim()
-          .replace(/\s+/g, '-')
-          .replace(/-+/g, '-');
+      // Common folders in static sites/GitHub repos
+      const roots = [
+        'images/blog/', 'images/', 'img/blog/', 'img/', 
+        'assets/images/blog/', 'assets/images/', 'assets/img/blog/', 'assets/img/'
+      ];
+      const exts  = ['.jpg', '.jpeg', '.png', '.webp', '.JPG', '.PNG', '.WebP'];
+
+      // Transform a title into several plausible filename variants (to match your originals)
+      function variantsFromTitle(title){
+        const base = title.trim();
+        const lower = base.toLowerCase();
+        const dash  = lower.replace(/&/g,'and').replace(/[^a-z0-9\s-_]/g,'').replace(/\s+/g,'-');
+        const under = lower.replace(/&/g,'and').replace(/[^a-z0-9\s-_]/g,'').replace(/\s+/g,'_');
+        const nospc = lower.replace(/&/g,'and').replace(/[^a-z0-9]/g,'');
+        const orig  = base.replace(/\s+/g,'-'); // preserves original casing w/ dashes
+        return Array.from(new Set([dash, under, nospc, orig]));
       }
 
-      // Check if an image URL exists (200 OK)
-      async function findExisting(srcCandidates) {
-        for (const src of srcCandidates) {
+      async function findExisting(candidates){
+        for (const src of candidates){
           try {
             const res = await fetch(src, { method: 'HEAD', cache: 'no-store', credentials: 'same-origin' });
             if (res.ok) return src;
-          } catch(e) { /* try next */ }
+          } catch (e) { /* try next */ }
         }
         return null;
       }
 
-      // For each post, if it doesn't already have an img near the top, try to add one
-      const posts = document.querySelectorAll('article.blog-post');
-      posts.forEach(async (post) => {
-        const hasImageAlready = post.querySelector('img');
-        if (hasImageAlready) return;
+      posts.forEach(async (post)=>{
+        // If the post already contains an image, keep it
+        if (post.querySelector('img')) return;
 
         const titleEl = post.querySelector('.blog-title');
         if (!titleEl) return;
+        const title = titleEl.textContent || '';
+        if (!title.trim()) return;
 
-        const slug = slugify(titleEl.textContent || '');
-        if (!slug) return;
-
+        // Build candidate paths using your ORIGINAL names (we try many variants, dirs, and extensions)
+        const nameVariants = variantsFromTitle(title);
         const candidates = [];
-        roots.forEach(r => exts.forEach(ext => candidates.push(r + slug + ext)));
+        for (const root of roots){
+          for (const name of nameVariants){
+            for (const ext of exts){
+              candidates.push(root + name + ext);
+              // also try “topic-with-stopwords-removed”
+              const compact = name.replace(/\b(in|the|and|for|of|with|to|a|an)\b-/g,'').replace(/--+/g,'-');
+              if (compact && compact !== name) candidates.push(root + compact + ext);
+            }
+          }
+        }
 
         const found = await findExisting(candidates);
         if (!found) return;
 
+        // Insert feature image after meta or after title
         const fig = document.createElement('figure');
         fig.className = 'blog-figure';
         const img = document.createElement('img');
         img.loading = 'lazy';
-        img.alt = titleEl.textContent.trim();
+        img.alt = title.trim();
         img.src = found;
         fig.appendChild(img);
 
-        // Insert figure right after the title
         const meta = post.querySelector('.blog-meta');
-        if (meta) {
-          meta.insertAdjacentElement('afterend', fig);
-        } else {
-          titleEl.insertAdjacentElement('afterend', fig);
-        }
+        (meta || titleEl).insertAdjacentElement('afterend', fig);
       });
     })();
   </script>
