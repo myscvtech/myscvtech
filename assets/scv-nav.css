@@ -3,16 +3,15 @@
   position: absolute !important;
   width: 1px; height: 1px;
   padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0, 0, 0, 0);
+  overflow: hidden; clip: rect(0,0,0,0);
   white-space: nowrap; border: 0;
 }
 
-/* Desktop stays exactly the same */
+/* Desktop: unchanged */
 .scv-menu-toggle { display: none; }
 
-/* --- Mobile only --- */
+/* Mobile only */
 @media (max-width: 768px) {
-  /* Show the hamburger */
   .scv-nav .scv-menu-toggle {
     display: inline-flex;
     flex-direction: column;
@@ -21,31 +20,24 @@
     border: 0;
     padding: 8px;
     cursor: pointer;
-    color: inherit; /* use your existing nav text color */
+    color: inherit; /* uses your existing nav text color */
   }
   .scv-nav .scv-bar {
-    width: 26px;
-    height: 3px;
-    background: currentColor;
-    border-radius: 2px;
-    display: block;
+    width: 26px; height: 3px;
+    background: currentColor; border-radius: 2px; display: block;
   }
 
-  /* Hide your existing menu by default on mobile */
-  .scv-nav .scv-menu {
-    display: none;
-  }
+  /* Hide menu by default on mobile */
+  .scv-nav .scv-menu { display: none; }
 
-  /* When opened, show stacked links */
+  /* Show when open */
   .scv-nav.scv-open .scv-menu {
     display: block;
-    background: inherit;  /* keeps your current nav background */
+    background: inherit;
     padding: 10px 0;
-    border-radius: 8px;   /* subtle; remove if you prefer square */
+    border-radius: 8px;
   }
-
   .scv-nav.scv-open .scv-menu li a {
-    display: block;
-    padding: 10px 12px;   /* spacing only; no font/color changes */
+    display: block; padding: 10px 12px;
   }
 }
