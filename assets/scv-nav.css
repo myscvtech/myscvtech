@@ -1,3 +1,4 @@
+/* ===== SCV Tech: Mobile-Only Dropdown Nav ===== */
 /* Screen-reader helper */
 .scv-sr-only {
   position: absolute !important;
@@ -7,30 +8,34 @@
   white-space: nowrap; border: 0;
 }
 
-/* Desktop: unchanged */
-.scv-menu-toggle { display: none; }
+/* Desktop (default): do NOT change your layout */
+.scv-menu-toggle { display: none !important; }  /* hide hamburger on desktop */
+/* NOTE: No desktop rule for .scv-menu — we leave your existing nav styles untouched */
 
 /* Mobile only */
 @media (max-width: 768px) {
+  /* Show hamburger on mobile */
   .scv-nav .scv-menu-toggle {
-    display: inline-flex;
+    display: inline-flex !important;
     flex-direction: column;
     gap: 5px;
     background: transparent;
     border: 0;
     padding: 8px;
     cursor: pointer;
-    color: inherit; /* uses your existing nav text color */
+    color: inherit; /* uses your current nav text color */
   }
   .scv-nav .scv-bar {
     width: 26px; height: 3px;
-    background: currentColor; border-radius: 2px; display: block;
+    background: currentColor;
+    border-radius: 2px;
+    display: block;
   }
 
-  /* Hide menu by default on mobile */
+  /* Hide your real links by default on mobile */
   .scv-nav .scv-menu { display: none; }
 
-  /* Show when open */
+  /* Show links when opened */
   .scv-nav.scv-open .scv-menu {
     display: block;
     background: inherit;
@@ -40,4 +45,9 @@
   .scv-nav.scv-open .scv-menu li a {
     display: block; padding: 10px 12px;
   }
+}
+
+/* Extra safety: force-hide button on large screens */
+@media (min-width: 769px) {
+  .scv-menu-toggle { display: none !important; }
 }
