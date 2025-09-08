@@ -1,231 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCV Tech | FAQ</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | SCV Tech</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Find answers to frequently asked questions about SCV Tech’s professional AV, security, and low-voltage lighting services for homes and businesses." />
-  <!-- Optional: shorten or remove keywords meta -->
+  <!-- your existing CSS links here -->
+  <link rel="stylesheet" href="style.css">
 
-  <link rel="stylesheet" href="style.css" />
-
-  <style>
-    @font-face {
-      font-family: 'BerlingLTStd-Roman';
-      src: url('/fonts/BerlingLTStd-Roman.otf') format('opentype');
-    }
-    @font-face {
-      font-family: 'BerlingLTStd-Bold';
-      src: url('/fonts/BerlingLTStd-Bold.otf') format('opentype');
-    }
-
-    .faq-section {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 20px 30px;
-      background: rgba(255,255,255,0.95);
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      font-family: 'BerlingLTStd-Roman', serif;
-    }
-    .faq-title {
-      font-family: 'BerlingLTStd-Bold', serif;
-      font-size: 36px;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    .faq-intro {
-      font-size: 18px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .faq-category {
-      font-family: 'BerlingLTStd-Bold', serif;
-      font-size: 24px;
-      margin-top: 40px;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
-    }
-    details.faq-item {
-      margin: 20px 0;
-      padding: 15px 20px;
-      background: #fff;
-      border-radius: 10px;
-      transition: background 0.3s ease;
-      border: 1px solid #ddd;
-      cursor: pointer;
-    }
-    details.faq-item[open] { background: #f9f9f9; }
-    details.faq-item summary {
-      font-size: 18px;
-      font-family: 'BerlingLTStd-Bold', serif;
-      font-weight: bold;
-      list-style: none;
-      outline: none;
-    }
-    details.faq-item p {
-      margin-top: 10px;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    .faq-contact {
-      font-size: 16px;
-      text-align: center;
-      margin-top: 30px;
-    }
-    .faq-contact a { color: #00588a; text-decoration: none; }
-    .faq-contact a:hover { text-decoration: underline; }
-
-    /* Back to top */
-    #back-to-top {
-      position: fixed;
-      bottom: 220px; /* higher for desktop */
-      right: 30px;
-      font-size: 24px;
-      background-color: #3b82f6;
-      color: #fff;
-      padding: 10px 15px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      z-index: 9999;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: opacity 0.3s ease;
-    }
-
-    @media (max-width: 768px) {
-      #back-to-top {
-        bottom: 250px; /* higher for mobile */
-        right: 20px;
-      }
-    }
-  </style>
-
-
-  <!-- SCV mobile nav -->
-<script src="assets/scv-nav.js"></script>
-
+  <!-- ✅ add SCV Tech mobile nav CSS AFTER your other styles -->
+  <link rel="stylesheet" href="assets/scv-nav.css">
 </head>
-
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo-and-icons">
-      <img src="images/logo.png" alt="SCV Tech Logo" class="logo" />
-      <div class="contact-icons">
-        <a href="tel:16612149212">
-          <img src="images/phone-icon.png" alt="Phone" class="icon" />
-          (661) 214-9212
-        </a>
-        <a href="https://instagram.com/scv.tech" target="_blank" rel="noopener">
-          <img src="images/Instagram-icon.png" alt="Instagram" class="icon" />
-          @scv.tech
-        </a>
-        <a href="https://nextdoor.com/pages/scv-tech-castaic-ca/" target="_blank" rel="noopener">
-          <img src="images/nextdoor-icon.png" alt="Nextdoor" class="icon" />
-          SCV Tech
-        </a>
-      </div>
-    </div>
 
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="faq.html" class="active">FAQ</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- ====== HEADER / NAV ====== -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">SCV Tech</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Hero (optional) -->
-  <div class="hero-banner">
-    <h1 class="hero-text"></h1>
-  </div>
-
+  <!-- ====== PAGE CONTENT ====== -->
   <main>
-    <section class="faq-section" id="faq">
-      <h1 class="faq-title">Frequently Asked Questions</h1>
-      <p class="faq-intro">
-        Below are some of the most common questions we receive about Audio/Video, Security,
-        and Low Voltage Lighting services for homes and businesses.
-      </p>
+    <h1>Frequently Asked Questions</h1>
 
-      <!-- Audio/Video FAQs -->
-      <h2 class="faq-category">🔊 Audio/Video (AV) FAQs</h2>
-      <details class="faq-item"><summary>Can you install ceiling or in-wall speakers?</summary><p>Yes! We install flush-mount speakers for a clean, professional look in homes and commercial spaces.</p></details>
-      <details class="faq-item"><summary>Do you offer custom home theater installations?</summary><p>Absolutely. From projectors and screens to Dolby Atmos surround sound, we design immersive home theater setups.</p></details>
-      <details class="faq-item"><summary>Can I control my AV system from my phone or tablet?</summary><p>Yes. We integrate AV systems with smartphone apps, smart remotes, and voice assistants like Alexa or Google Home.</p></details>
-      <details class="faq-item"><summary>Do you work with Sonos systems?</summary><p>Yes. We install, configure, and integrate Sonos systems into your space, including Arc, Beam, and outdoor speakers.</p></details>
-      <details class="faq-item"><summary>Can you install AV systems in conference rooms or offices?</summary><p>Yes. We provide displays, microphones, speakers, video conferencing tools, and Zoom-ready setups for businesses.</p></details>
-      <details class="faq-item"><summary>Can you hide all my AV equipment and wires?</summary><p>Definitely. We offer in-wall cable routing and media closets so your setup stays clean and modern.</p></details>
-
-      <!-- Security FAQs -->
-      <h2 class="faq-category">🛡 Security System FAQs</h2>
-      <details class="faq-item"><summary>What’s the difference between NVR and DVR systems?</summary><p>DVRs are used with analog cameras; NVRs are for IP cameras and offer better quality and smarter features.</p></details>
-      <details class="faq-item"><summary>Can I access my security footage from my smartphone?</summary><p>Yes. Our systems include apps that allow you to view live or recorded footage from anywhere.</p></details>
-      <details class="faq-item"><summary>Do you provide video doorbells?</summary><p>Yes. We install Ring, Nest, Wyze, and other video doorbells with mobile access and two-way audio.</p></details>
-      <details class="faq-item"><summary>Are your systems good for Airbnb or rental properties?</summary><p>Yes. We install remote-access cameras and smart locks perfect for property management.</p></details>
-      <details class="faq-item"><summary>Do you provide monitoring services?</summary><p>We offer self-monitoring and can integrate with third-party professional monitoring from the provider of your choice.</p></details>
-
-      <!-- Low Voltage Lighting FAQs -->
-      <h2 class="faq-category">💡 Low Voltage Lighting FAQs</h2>
-      <details class="faq-item"><summary>What is low voltage lighting?</summary><p>It’s lighting that uses 12V or 24V systems, often used outdoors or for accent lighting. It’s safe, energy-efficient, and ideal for residential or commercial properties.</p></details>
-      <details class="faq-item"><summary>Can I control low voltage lighting with my phone?</summary><p>Yes. We offer smart controllers that connect to your smartphone, Google Home, or Alexa.</p></details>
-      <details class="faq-item"><summary>Can you install pathway or landscape lights?</summary><p>Yes. We install weatherproof LED systems perfect for walkways, backyards, and entry points.</p></details>
-      <details class="faq-item"><summary>Is low voltage lighting a good choice for my storefront or office?</summary><p>Absolutely. It enhances curb appeal, improves safety, and saves on long-term energy costs.</p></details>
-
-      <!-- Pricing FAQs -->
-      <h2 class="faq-category">💵 Pricing & Cost Questions</h2>
-      <details class="faq-item"><summary>How much does a basic security camera system cost?</summary><p>A 4-camera HD system with installation typically starts around $1,200–$1,800, depending on features and location. Prices vary by job.</p></details>
-      <details class="faq-item"><summary>What’s the cost to mount a TV and hide cables?</summary><p>Standard TV mounting with concealed wiring usually starts at $250–$450, depending on wall type and cable routing. Prices vary by job.</p></details>
-      <details class="faq-item"><summary>Do you charge hourly or by project?</summary><p>Most jobs are quoted per project. Troubleshooting or small add-ons may be billed hourly.</p></details>
-      <details class="faq-item"><summary>Do you offer free quotes?</summary><p>Yes. We provide free consultations and quotes for all installation services.</p></details>
-      <details class="faq-item"><summary>Do you offer bundle pricing?</summary><p>Yes. We provide bundle discounts for combined services like AV, lighting, and security system installs.</p></details>
-
-      <!-- Suggestions & Planning FAQs -->
-      <h2 class="faq-category">📋 Suggestions & Planning FAQs</h2>
-      <details class="faq-item"><summary>Should I pre-wire during construction?</summary><p>Yes—pre-wiring during new construction or remodeling is more cost-effective and future-proofs your space.</p></details>
-      <details class="faq-item"><summary>How many cameras do I need for full coverage?</summary><p>Most homes need 4–6 cameras. Businesses may require 8–16+, depending on layout and entrances.</p></details>
-      <details class="faq-item"><summary>What’s the best AV system for a backyard?</summary><p>We recommend weather-rated outdoor TVs and speakers, paired with surge protection and wireless app control.</p></details>
-      <details class="faq-item"><summary>Do you offer after-hours installation?</summary><p>Yes. We can schedule installs during evenings or weekends to accommodate your schedule.</p></details>
-
-      <!-- Contact Info -->
-      <h2 class="faq-category">📞 Still Have Questions?</h2>
-      <p class="faq-contact">
-        Call or text us at: <strong>661-214-9212</strong><br>
-        Instagram: <a href="https://instagram.com/scv.tech" target="_blank" rel="noopener">@scv.tech</a><br>
-        Nextdoor: <strong>SCV Tech</strong><br>
-        Email: <strong>info@myscvtech.com</strong><br>
-      </p>
+    <section>
+      <h2>Do you install security cameras for businesses?</h2>
+      <p>Yes. We design, install, and configure PoE/IP camera systems, NVRs, and remote access for small to mid-size businesses.</p>
     </section>
+
+    <section>
+      <h2>Do you offer smart home integration?</h2>
+      <p>We integrate Ring, Nest, Wyze, and AV control systems, connecting lighting, thermostats, and audio into one app.</p>
+    </section>
+
+    <!-- add more Q&A sections here -->
   </main>
 
-  <!-- Back to Top button -->
-  <button id="back-to-top" aria-label="Back to top">↑</button>
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p>&copy; 2025 SCV Tech</p>
+  </footer>
 
-  <script>
-    // Back to top behavior
-    const btn = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-      btn.style.display = window.scrollY > 400 ? 'block' : 'none';
-    });
-    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  </script>
-
-  <!-- Tidio Chat -->
-  <script src="//code.tidio.co/2hqvbkrus0bplpiymttoeuroyi8v86zz.js" async></script>
-
-
-
-
-
-  <!-- SCV mobile nav -->
-<script src="assets/scv-nav.js"></script>
-
+  <!-- ✅ add SCV Tech mobile nav JS at the very end, before </body> -->
+  <script src="assets/scv-nav.js"></script>
 </body>
 </html>
