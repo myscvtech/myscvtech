@@ -238,35 +238,29 @@
 
 
 
-  <!-- Founders Horizontal Strip -->
+<!-- Founders Horizontal Strip -->
 <section id="founders-strip" aria-label="Founders photos">
   <div class="founders-wrap">
     <h2 class="founders-title underlined">Meet the Owners</h2>
 
-    <!-- Scroll buttons (optional) -->
+    <!-- Scroll buttons (desktop/tablet only) -->
     <button class="founders-nav prev" aria-label="Scroll left">‹</button>
     <button class="founders-nav next" aria-label="Scroll right">›</button>
 
     <!-- Horizontal scroller -->
     <div class="founders-scroller" id="foundersScroller">
-      <!-- Use landscape images of the 3 owners together -->
+      <!-- Use landscape or portrait shots of the 3 owners together -->
       <figure class="founders-item">
-        <img src="images/teamphoto1_thumb.jpg" alt="SCV Tech owners — group photo 1" loading="lazy" />
-      </figure>
-
-      <figure class="founders-item">
-        <img src="images/teamphoto2_thumb.jpg" alt="SCV Tech owners — group photo 2" loading="lazy" />
+        <img src="images/founders/owners-1.jpg" alt="SCV Tech owners — group photo 1" loading="lazy" />
       </figure>
 
       <figure class="founders-item">
-        <img src="images/teamphoto3_thumb.jpg" alt="SCV Tech owners — group photo 3" loading="lazy" />
+        <img src="images/founders/owners-2.jpg" alt="SCV Tech owners — group photo 2" loading="lazy" />
       </figure>
 
-        <figure class="founders-item">
-        <img src="images/teamphoto4_thumb.jpg" alt="SCV Tech owners — group photo 4" loading="lazy" />
+      <figure class="founders-item">
+        <img src="images/founders/owners-3.jpg" alt="SCV Tech owners — group photo 3" loading="lazy" />
       </figure>
-
-      <!-- Add more <figure> blocks if you have more group shots -->
     </div>
   </div>
 </section>
@@ -281,6 +275,7 @@
     document.querySelector('#founders-strip .next')?.addEventListener('click', () => scroller.scrollBy({left: by(), behavior: 'smooth'}));
   })();
 </script>
+
 
 </body>
 </html>
