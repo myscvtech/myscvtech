@@ -1293,3 +1293,98 @@ body.gallery-page,
   box-sizing: border-box;
   text-align: center;
 }
+
+
+
+
+/* ---------- Founders Horizontal Strip (scoped) ---------- */
+#founders-strip {
+  position: relative;
+  margin: 48px 0 0;
+  padding: 28px 0 36px;
+  background: rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+}
+
+#founders-strip .founders-wrap {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  position: relative;
+}
+
+#founders-strip .founders-title {
+  margin: 0 0 12px;
+  text-align: center;
+  text-underline-offset: 6px;
+  opacity: 0.95;
+}
+
+/* Horizontal scroller */
+#founders-strip .founders-scroller {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 80%;
+  gap: 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  padding: 10px 8px;
+  -webkit-overflow-scrolling: touch;
+  mask-image: linear-gradient(90deg, transparent 0, #000 28px, #000 calc(100% - 28px), transparent 100%);
+}
+
+@media (min-width: 768px) {
+  #founders-strip .founders-scroller { grid-auto-columns: 56%; gap: 16px; }
+}
+@media (min-width: 1100px) {
+  #founders-strip .founders-scroller { grid-auto-columns: 520px; }
+}
+
+/* Each item */
+#founders-strip .founders-item {
+  position: relative;
+  scroll-snap-align: center;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.12);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+#founders-strip .founders-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9; /* change to 3 / 2 if needed */
+  object-fit: cover;
+  transform: translateZ(0);
+  transition: transform .35s ease;
+}
+#founders-strip .founders-item:hover img { transform: scale(1.03); }
+
+/* Prev / Next buttons */
+#founders-strip .founders-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 36px; height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(20,20,20,0.35);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 22px; line-height: 34px;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity .2s ease, transform .2s ease;
+  opacity: .9;
+}
+#founders-strip .founders-nav:hover { transform: translateY(-50%) scale(1.06); }
+#founders-strip .founders-nav.prev { left: -2px; }
+#founders-strip .founders-nav.next { right: -2px; }
+@media (max-width: 640px) {
+  #founders-strip .founders-nav { display: none; } /* mobile swipes */
+}
