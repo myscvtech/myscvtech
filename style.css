@@ -1388,3 +1388,15 @@ body.gallery-page,
 @media (max-width: 640px) {
   #founders-strip .founders-nav { display: none; } /* mobile swipes */
 }
+
+
+
+
+
+
+
+
+@media (max-width: 420px) {
+  #founders-strip .founders-scroller { grid-auto-columns: 88%; }
+  #founders-strip { padding: 20px 0 28px; }
+}
