@@ -228,5 +228,59 @@
 
   <!-- Tidio Chat -->
   <script src="//code.tidio.co/2hqvbkrus0bplpiymttoeuroyi8v86zz.js" async></script>
+
+
+
+
+
+
+
+
+
+
+  <!-- Founders Horizontal Strip -->
+<section id="founders-strip" aria-label="Founders photos">
+  <div class="founders-wrap">
+    <h2 class="founders-title underlined">Meet the Owners</h2>
+
+    <!-- Scroll buttons (optional) -->
+    <button class="founders-nav prev" aria-label="Scroll left">‹</button>
+    <button class="founders-nav next" aria-label="Scroll right">›</button>
+
+    <!-- Horizontal scroller -->
+    <div class="founders-scroller" id="foundersScroller">
+      <!-- Use landscape images of the 3 owners together -->
+      <figure class="founders-item">
+        <img src="images/teamphoto1_thumb.jpg" alt="SCV Tech owners — group photo 1" loading="lazy" />
+      </figure>
+
+      <figure class="founders-item">
+        <img src="images/teamphoto2_thumb.jpg" alt="SCV Tech owners — group photo 2" loading="lazy" />
+      </figure>
+
+      <figure class="founders-item">
+        <img src="images/teamphoto3_thumb.jpg" alt="SCV Tech owners — group photo 3" loading="lazy" />
+      </figure>
+
+        <figure class="founders-item">
+        <img src="images/teamphoto4_thumb.jpg" alt="SCV Tech owners — group photo 4" loading="lazy" />
+      </figure>
+
+      <!-- Add more <figure> blocks if you have more group shots -->
+    </div>
+  </div>
+</section>
+
+<script>
+  // Minimal scroll controls
+  (function () {
+    const scroller = document.getElementById('foundersScroller');
+    if (!scroller) return;
+    const by = () => Math.max(scroller.clientWidth * 0.8, 320);
+    document.querySelector('#founders-strip .prev')?.addEventListener('click', () => scroller.scrollBy({left: -by(), behavior: 'smooth'}));
+    document.querySelector('#founders-strip .next')?.addEventListener('click', () => scroller.scrollBy({left: by(), behavior: 'smooth'}));
+  })();
+</script>
+
 </body>
 </html>
