@@ -1433,3 +1433,22 @@ body.gallery-page,
 #founders-strip .founders-title { min-width: 260px; padding-left: 32px; padding-right: 32px; }
 
 
+
+
+/* Home page: remove the OUTER box around the blog list only */
+#home-blog-section {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 40px auto 40px !important; /* keeps spacing similar to other boxes */
+  border-radius: 0 !important;
+}
+
+/* Keep inner box exactly like other cards */
+#home-blog-section .blog-box {
+  /* no changes needed — it already matches your other boxes */
+}
+
+
+
