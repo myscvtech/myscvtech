@@ -1452,3 +1452,17 @@ body.gallery-page,
 
 
 
+
+
+
+/* Ensure the inner home blog box matches other content boxes */
+#home-blog-section .blog-box {
+  background-color: rgba(255, 255, 255, 0.85); /* same as About/Service box */
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
